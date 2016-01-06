@@ -1,51 +1,55 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{page.title}}</title>
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
 
-    {% include meta.html %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="/js/main.js"></script>
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link rel="stylesheet" href="/css/tomorrow.css">
+  <link rel="stylesheet" href="/css/railscasts.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+</head>
+<body class="{{page.body_class}}">
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  <nav class="nav-bar">
+    <div class="wrap">
+      <ul class="hor">
+        <li> <a href="/" class="logo"><img src="/img/logo.png" alt="logo" height="20" /></a> </li>
+        {% assign current = page.url %}
+        {% for main_link in site.main_links %}
+          <li> <a href="{{main_link.link}}"
+            {% if current == main_link.link %}
+              class="current"
+            {% endif %}
+            > {{ main_link.title }} </a> </li>
+        {% endfor %}
+      </ul>
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+      <ul class="right hor">
+          <li><input type="text" name="search" id="search" class="search-box" placeholder="Search"><div id="search_results" class="search-results"></div></li>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
+      </ul>
     </div>
+  </nav>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+  <div class="wrap">
+    {% if page.sidebar %}
+
+      {% if page.body_class contains 'multi-page' %}
+          {% include sidebar_multi.html %}
+      {% else %}
+        {% include sidebar.html %}
+      {% endif %}
+    {% endif %}
+    <div class="main">
+      {{content}}
     </div>
-
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
+  </div>
+</body>
 </html>
