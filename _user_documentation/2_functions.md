@@ -1,5 +1,5 @@
 ---
-title: Functions
+title: 2 Functions
 right_code:
 ---
 
@@ -9,7 +9,7 @@ right_code:
 
 In order to register to a Communote Microblog with free access, you only need to type in your email address in the Register form (see Figure "Login & Registration"). You will then receive an e-mail with an automatically generated link that closes off the registration.
 
-![](/images/docu/docu/registration.png)
+![](/images/docu/registration.png)
 
 _Figure "Login & Registration"_
 
@@ -25,7 +25,7 @@ If you want to write a new note, you will always find a small editor field above
 
 The editor has further options for your message ("Topic", "People", "Tags" and "Attachments") that will help you add additional information and content to your note. Those options are not mandatory and can be used on demand. If you choose one of those options, a new input field will appear in which you can add the information.
 
-![](/images/docu/docu/editor.png)
+![](/images/docu/editor.png)
 
 _Figure "Editor"_
 

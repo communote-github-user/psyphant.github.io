@@ -1,5 +1,5 @@
 ---
-title: Interface and basic functions
+title: 1 Interface and basic functions
 description: An intro to the user documentation
 right_code:
 ---

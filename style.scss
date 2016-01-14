@@ -5,12 +5,4 @@
 // IMPORTS
 //
 
-@import "reset";
-@import "variables";
-
-.navbar {
-  background-color: $white;
-    .hor > li > a {
-      color: $black;
-    }
-}
+@import "style";
