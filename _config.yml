@@ -71,16 +71,14 @@ exclude:
 
 user_collections:
   interface:
-    title: Interface and basic functions
+    title: 1 Interface and basic functions
     render: true
     output: true
   functions:
-    title: "Functions"
+    title: 2 Functions
     render: true
     output: true
-
 developer_collections:
-
 main_links:
   -
     title: Documentation

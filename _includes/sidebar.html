@@ -3,7 +3,7 @@
   {% for collection in site.user_collections %}
     {% if collection[1].render %}
         <section>
-          <h6> {{collection[1].title}} </h6>
+          <h2> {{collection[1].title}} </h2>
           <ul>
             {% for doc in collection[1].docs %}
               <li><a href="#{{doc.url | replace: '/', '' | replace: '.', ''}}">
@@ -19,7 +19,7 @@
   {% for collection in site.developer_collections %}
     {% if collection[1].render %}
         <section>
-          <h6> {{collection[1].title}} </h6>
+          <h2> {{collection[1].title}} </h2>
           <ul>
             {% for doc in collection[1].docs %}
               <li><a href="#{{doc.url | replace: '/', '' | replace: '.', ''}}">
