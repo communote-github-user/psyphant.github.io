@@ -69,15 +69,17 @@ exclude:
     - README.md
     - CNAME
 
-collections:
-  user_documentation:
-    title: User Documentation
-    interface:
-      render: true
-      output: true
-    functions:
-      render: true
-      output: true
+user_collections:
+  interface:
+    title: Interface and basic functions
+    render: true
+    output: true
+  functions:
+    title: "Functions"
+    render: true
+    output: true
+
+developer_collections:
 
 main_links:
   -
