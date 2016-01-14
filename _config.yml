@@ -74,6 +74,7 @@ collections:
     title: User Documentation
     render: true
     output: true
+
 main_links:
   -
     title: Documentation

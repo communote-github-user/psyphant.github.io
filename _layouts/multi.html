@@ -6,9 +6,9 @@ layout: default
 <script src="/js/search.js"></script>
 <section class="doc-content full">
   <section class="left-docs">
-    <h3><a id="{{ page.url | replace: '/', '' | replace: '.', '' }}">
+    <h1><a id="{{ page.url | replace: '/', '' | replace: '.', '' }}">
       {{page.title}}
-      {% if page.type %}<span class="endpoint {{page.type}}"></span> {% endif %}</a></h3>
+      {% if page.type %}<span class="endpoint {{page.type}}"></span> {% endif %}</a></h1>
     {% if page.description %}
       <p class="description">{{page.description}}</p>
     {% endif %}
