@@ -1,25 +1,8 @@
 <div id="sidebar" class="sidebar">
-  <h1>User Documentation</h1>
-  {% for collection in site.user_collections %}
+  {% for collection in site.collections %}
     {% if collection[1].render %}
         <section>
-          <h2> {{collection[1].title}} </h2>
-          <ul>
-            {% for doc in collection[1].docs %}
-              <li><a href="#{{doc.url | replace: '/', '' | replace: '.', ''}}">
-                {{doc.title}}
-                {% if doc.type %}<span class="endpoint {{doc.type}}"></span> {% endif %}
-                </a></li>
-            {% endfor %}
-          </ul>
-        </section>
-    {% endif %}
-  {% endfor %}
-  <h1>Developer Documentation</h1>
-  {% for collection in site.developer_collections %}
-    {% if collection[1].render %}
-        <section>
-          <h2> {{collection[1].title}} </h2>
+          <h6> {{collection[1].title}} </h6>
           <ul>
             {% for doc in collection[1].docs %}
               <li><a href="#{{doc.url | replace: '/', '' | replace: '.', ''}}">

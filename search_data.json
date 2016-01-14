@@ -3,7 +3,7 @@ layout: null
 ---
 
 {
-	{% for collection in site.user_collections %}
+	{% for collection in site.collections %}
     {% if collection[1].render %}
       {% unless forloop.first %}
         ,
