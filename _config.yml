@@ -72,8 +72,12 @@ exclude:
 collections:
   user_documentation:
     title: User Documentation
-    render: true
-    output: true
+    interface:
+      render: true
+      output: true
+    functions:
+      render: true
+      output: true
 
 main_links:
   -
