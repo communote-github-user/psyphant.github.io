@@ -1,7 +1,7 @@
 <div id="sidebar" class="sidebar">
   {% for collection in site.collections %}
-    {% if collection[1].render %}
-      {% if collection[1].docu_category == "user" %}
+    {% if collection.docu_category == "user" %}
+      {% if collection[1].render %}
         <h5>User Documentation</h5>
         <section>
           <h6> {{collection[1].title}} </h6>
@@ -18,8 +18,8 @@
     {% endif %}
   {% endfor %}
   {% for collection in site.collections %}
-    {% if collection[1].render %}
-      {% if collection[1].docu_category == "admin" %}
+    {% if collection.docu_category == "admin" %}
+      {% if collection[1].render %}
         <h5>Admin Documentation</h5>
         <section>
           <h6> {{collection[1].title}} </h6>

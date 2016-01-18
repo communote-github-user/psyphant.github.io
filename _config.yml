@@ -75,7 +75,7 @@ collections:
     docu_category: user
     render: true
     output: true
-  functions:
+  interface:
     title: Interface
     docu_category: user
     render: true
