@@ -12,9 +12,21 @@ title: Communote Documentation
     {% for doc in collection[1].docs %}
       <section class="doc-content full">
         <section class="left-docs">
-          <h3><a id="{{ doc.url | replace: '/', '' | replace: '.', '' }}">
+          {% if doc.level == 1 %}
+            <h1>
+          {% endif %}
+          {% if doc.level == 2 %}
+            <h2>
+          {% endif %}
+          <a id="{{ doc.url | replace: '/', '' | replace: '.', '' }}">
             {{doc.title}}
-            {% if doc.type %}<span class="endpoint {{doc.type}}"></span> {% endif %}</a></h3>
+            {% if doc.type %}<span class="endpoint {{doc.type}}"></span> {% endif %}</a>
+            {% if doc.level == 1 %}
+              </h1>
+            {% endif %}
+            {% if doc.level == 2 %}
+              </h2>
+            {% endif %}
           {% if doc.description %}
             <p class="description">{{doc.description}}</p>
           {% endif %}

@@ -1,7 +1,8 @@
 ---
+title: 2.2 Write Notes
+level: 2
+category: user
 ---
-
-## 2.2 Write Notes
 
 Using Comunote you can quickly and easily write notes, messages or protocols. You are thereby not - unlike other microblogging services - limited to a number of letters. You can add easy formats to your note and attach any kind of data to it. Pictures with the formats JPG, PNG or GIF will automatically be transformed into a preview within the note. It is possible to attach a video-link from YouTube or Vimeo, witch will be embed into Communote. You can also notify your colleagues using @mentions.
 

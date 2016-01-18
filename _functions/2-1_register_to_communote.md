@@ -1,8 +1,8 @@
 ---
 title: 2.1 Register to Communote
+level: 2
+category: user
 ---
-
-## 2.1 Register to Communote
 
 In order to register to a Communote Microblog with free access, you only need to type in your email address in the Register form (see Figure "Login & Registration"). You will then receive an e-mail with an automatically generated link that closes off the registration.
 

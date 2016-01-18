@@ -1,7 +1,8 @@
 ---
+title: 2.3 Read Notes
+level: 2
+category: user
 ---
-
-## 2.3 Read Notes
 
 ### 2.3.1 Note view
 

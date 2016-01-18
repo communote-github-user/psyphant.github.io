@@ -1,6 +1,8 @@
 ---
+title: 2.6 Profile-Options
+level: 2
+category: user
 ---
-## 2.6 Profile-Options
 
 As you are choosing "YourName" in the top menu bar and then click "edit profile", you can change profile details like your company, phone number and tags
 

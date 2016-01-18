@@ -1,6 +1,8 @@
 ---
+title: 2.4 Manage topics
+level: 2
+category: user
 ---
-## 2.4 Manage topics
 
 ### 2.4.1 Topic localization
 

@@ -1,5 +1,9 @@
 ---
+title: 2.8 Bookmarklet
+level: 2
+category: user
 ---
+
 Go to "Tools" at the topbar in to install the bookmarklet.
 
 ![](/images/docu/bookmarklet_page.png)
