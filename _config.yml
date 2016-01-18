@@ -70,8 +70,19 @@ exclude:
     - CNAME
 
 collections:
-  user_documentation:
-    title: User Documentation
+  functions:
+    title: Functions
+    docu_category: user
+    render: true
+    output: true
+  functions:
+    title: Interface
+    docu_category: user
+    render: true
+    output: true
+  admin:
+    title: Admin test
+    docu_category: admin
     render: true
     output: true
 main_links:

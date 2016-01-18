@@ -1,6 +1,8 @@
 <div id="sidebar" class="sidebar">
   {% for collection in site.collections %}
     {% if collection[1].render %}
+      {% if collection[1].docu_category == "user" %}
+        <h5>User Documentation</h5>
         <section>
           <h6> {{collection[1].title}} </h6>
           <ul>
@@ -12,6 +14,25 @@
             {% endfor %}
           </ul>
         </section>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% for collection in site.collections %}
+    {% if collection[1].render %}
+      {% if collection[1].docu_category == "admin" %}
+        <h5>Admin Documentation</h5>
+        <section>
+          <h6> {{collection[1].title}} </h6>
+          <ul>
+            {% for doc in collection[1].docs %}
+              <li><a href="#{{doc.url | replace: '/', '' | replace: '.', ''}}">
+                {{doc.title}}
+                {% if doc.type %}<span class="endpoint {{doc.type}}"></span> {% endif %}
+                </a></li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endif %}
     {% endif %}
   {% endfor %}
 </div>
