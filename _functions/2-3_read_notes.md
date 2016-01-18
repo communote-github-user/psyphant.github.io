@@ -1,3 +1,6 @@
+---
+---
+
 ## 2.3 Read Notes
 
 ### 2.3.1 Note view

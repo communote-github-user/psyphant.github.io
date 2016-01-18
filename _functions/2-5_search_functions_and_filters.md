@@ -1,3 +1,5 @@
+---
+---
 ## 2.5 Search Functions and Filters
 
 If you are looking for a specific message, Communote supplies an extensive search function in order for you to find it.

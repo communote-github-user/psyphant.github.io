@@ -1,3 +1,5 @@
+---
+---
 ## 2.7  Embed Communote
 
 It is possible to embed streams of Communote topics into any website. Therefor you have to copy and paste a special embed code (a JavaScript snippet) into the HTML code of your website.

@@ -1,5 +1,4 @@
 ---
-title: 1.1 Settings and basic functions
 ---
 
 ## 1.1 Settings and basic functions

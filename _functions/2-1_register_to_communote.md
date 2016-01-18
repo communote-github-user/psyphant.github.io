@@ -1,6 +1,5 @@
 ---
 title: 2.1 Register to Communote
-right_code:
 ---
 
 ## 2.1 Register to Communote

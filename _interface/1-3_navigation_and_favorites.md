@@ -1,3 +1,6 @@
+---
+---
+
 ## 1.3 Navigation and Favorites on the left sidebar
 
 On the left hand side of your screen you can choose in which topic you would like to act. When you choose "Notes" you will be guided to an overview of all messages in the system that you are able to see. This is also the welcome screen that you were brought to when you logged into Communote.
