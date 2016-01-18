@@ -71,12 +71,12 @@ exclude:
 
 collections:
   interface:
-    title: Interface
+    title: 1 Interface
     docu_category: user
     render: true
     output: true
   functions:
-    title: Functions
+    title: 2 Functions
     docu_category: user
     render: true
     output: true
