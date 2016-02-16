@@ -52,7 +52,7 @@ entries:
       output: web, pdf
     - title: 2 Functions
       unlinked: true
-      url: /doc/functions.html
+      url: /doc/user_functions.html
       audience: users
       version: all
       output: web, pdf
