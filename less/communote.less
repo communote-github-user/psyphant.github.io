@@ -1,0 +1,318 @@
+// First: Import Bootstrap
+@import "bootstrap/bootstrap.less";
+
+// Now begin own style...
+body {
+  font-family: 'OpenSans';
+  line-height: 2;
+  #header {
+    .container();
+    text-align: center;
+    img {
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+  }
+
+  #main-navigation {
+    @media (min-width: 768px){
+      height: 65px;
+      border-bottom: 4px solid #E28C51;
+    }
+    .navbar-nav{
+      margin: 0 auto;
+      display: flex;
+      height: 60px;
+      align-items: center;
+      @media (min-width: 768px){
+        font-size: @font-size-large;
+        float:none;
+        display: table;
+        table-layout: fixed;
+
+        li {
+          border-bottom: 5px solid transparent;
+          &:hover, &.active{
+            border-color: #FFFFFF;
+          }
+          a {
+            height: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 25px;
+            .ion {
+              font-size: 30px;
+              margin-top: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #teaser {
+    background-image: url("../images/blur_bg.jpg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: relative;
+    padding-bottom: 30px;
+
+    .teaser-wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .functions-teaser {
+        flex: 3;
+        margin-top: 60px;
+        margin-right: 30px;
+      }
+
+      .images-teaser {
+        flex: 1;
+      }
+    }
+
+    h1 {
+      font-size: 45px;
+      font-weight: 600;
+      margin-top: 35px;
+      text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+      opacity: 0.8;
+    }
+
+    .icon-bar {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding: 0;
+      margin: 35px -10px;
+      overflow: hidden;
+      li {
+        flex: 1;
+        text-align: center;
+        margin: 0 10px;
+        @media (max-width: @screen-md-max) {
+          img {
+            width: 110px;
+          }
+        }
+        span {
+          display: block;
+          color: @gray;
+          padding: 8px;
+          font-weight: 600;
+          font-size: @font-size-small;
+          margin-top: -10px;
+          background-color: rgba(255,255,255,0.2);
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .fc-slideshow {
+      margin-top: 35px;
+      width: 400px;
+      height: 400px;
+      @media (max-width: @screen-md-max) {
+        width: 360px;
+        height: 360px;
+      }
+      @media (max-width: @screen-sm-max) {
+        width: 270px;
+        height: 270px;
+      }
+    }
+
+    .description {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-top: 50px;
+      background-color: white;
+      box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.1);
+      padding: 15px;
+      position: relative;
+
+      &:after {
+      	bottom: 100%;
+      	left: 10%;
+      	border: solid transparent;
+      	content: " ";
+      	height: 0;
+      	width: 0;
+      	position: absolute;
+      	pointer-events: none;
+      }
+
+      &:after {
+      	border-color: rgba(255, 255, 255, 0);
+      	border-bottom-color: white;
+      	border-width: 20px;
+      	margin-left: -21px;
+      }
+    }
+    @media (max-width: @screen-sm-max) {
+      background-size: cover;
+      padding-bottom: 20px;
+      .teaser-wrapper .functions-teaser {
+        flex: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        .icon-bar {
+          flex-wrap: nowrap;
+          @media (max-width: @screen-xs-max) {
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+            li {
+              flex-basis: 35%;
+            }
+          }
+        }
+      }
+      .description:after {
+        left: 50%;
+      }
+    }
+    &.start {
+      h1 {
+        position: absolute;
+        @media (max-width: @screen-sm-max) {
+          position: relative;
+        }
+      }
+    }
+  }
+
+  #features {
+    position: relative;
+    min-height: 380px;
+    margin-top: 35px;
+    .feature-list {
+      list-style-type: none;
+      padding: 0;
+      margin-bottom: 45px;
+      li {
+        padding-bottom: 2px;
+        span {
+          color: #777;
+          float: left;
+          font-size: 24px;
+          text-align: center;
+          &:before {
+            min-width: 25px;
+            position: absolute;
+          }
+        }
+        h3 {
+          font-size: @font-size-base;
+          font-weight: 500;
+          margin-left: 40px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  #get-started {
+    background-image: url("../images/blur_bg2.jpg");
+    min-height: 380px;
+    padding-top: 35px;
+    @media (max-width: @screen-md-max) {
+      background-size: cover;
+    }
+    position: relative;
+
+    h2 {
+      text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+
+    ul {
+      list-style-type: none;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      @media (max-width: @screen-md-max) {
+        flex-direction: column;
+        li {
+          margin-bottom: 20px;
+          width: 100%;
+        }
+      }
+      li {
+        flex: 1;
+        text-align: center;
+        &.step {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 20px;
+          padding: 12px;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+          }
+        }
+        .ion {
+          font-size: 40px;
+        }
+        .icon-label {
+          display: block;
+        }
+        a {
+          display: block;
+          color: #121214;
+          text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  #service {
+    margin-bottom: 60px;
+    margin-top: 35px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  .call-to-action-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -35px;
+    text-align: center;
+    z-index: 2;
+    a.btn {
+      .btn-lg();
+      background-color: #22ade8;
+      border-bottom: 4px solid #0287bf;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 15px 30px;
+
+      &:hover {
+        border-bottom-width: 1px;
+        color: #FFFFFF;
+      }
+    }
+  }
+  #not-found {
+    background-image: url("../images/blur_bg2.jpg");
+    min-height: 380px;
+    padding-top: 35px;
+    @media (max-width: @screen-md-max) {
+      background-size: cover;
+    }
+    position: relative;
+
+    h1 {
+      text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+      opacity: 0.8;
+      margin-bottom: 50px;
+    }
+  }
+}

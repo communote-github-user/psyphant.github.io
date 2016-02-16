@@ -1,0 +1,32 @@
+---
+layout: none
+search: exclude
+---
+{% include custom/conditions.html %}
+
+{% for entry in sidebar %}
+  {% for subcategory in entry.subcategories %}
+    {% if subcategory.version contains version and subcategory.output contains "pdf" %}
+        {% for item in subcategory.items %}
+          {% if item.version contains version and item.output contains "pdf" %}
+            {{site.url}}{{site.baseurl}}{{item.url }}
+            {% if item.thirdlevel %}
+              {% for thirdlevel in item.thirdlevel %}
+                {% if thirdlevel.version contains version and thirdlevel.output contains "pdf" %}
+                  {{site.url}}{{site.baseurl}}{{thirdlevel.url}}
+                  {% if thirdlevel.thirdlevelitems %}
+                    <ul class="fourthlevel">
+                      {% for fourthlevel in thirdlevel.thirdlevelitems %}
+                        {% if fourthlevel.version contains version and fourthlevel.output contains "pdf" %}
+                          {{site.url}}{{site.baseurl}}{{fourthlevel.url}}
+                        {% endif %}
+                      {% endfor %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

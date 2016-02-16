@@ -1,0 +1,63 @@
+# project definitions
+project: communote
+audience: all
+product: doc
+platform: all
+version: all
+output: pdf
+destination: pdf
+homepage_title: Communote Documentation
+site_title: Communote Documentation
+project_folder: doc
+github_editme_path: communote/communote.github.io
+disqus_shortname: communote-doc
+
+# the algolia entries here are experimental only.
+
+#gems:
+#  - algoliasearch-jekyll
+#algolia:
+#  application_id: 'HXUBJERYYB'
+#  index_name:     'documentation_theme_jekyll_developers'
+port: 4010
+
+exclude:
+  - _site
+  - _drafts
+  - configs/
+  - less
+  - licenses
+  - _tooltips
+
+# same for all
+host: 127.0.0.1
+feedback_email: github@communote.com
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+
+collections:
+  tooltips:
+    output: false
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true

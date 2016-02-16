@@ -1,55 +1,139 @@
 ---
 layout: default
-sidebar: true
-body_class: docs
-title: Communote Documentation
+search: exclude
+title: Homepage
 ---
-<script src="/js/lunr.min.js"></script>
-<script src="/js/search.js"></script>
 
-{% for collection in site.collections %}
-  {% if collection[1].render %}
-    {% for doc in collection[1].docs %}
-      <section class="doc-content full">
-        <section class="left-docs">
-          {% if doc.level == 1 %}
-            <h1>
-          {% endif %}
-          {% if doc.level == 2 %}
-            <h2>
-          {% endif %}
-          <a id="{{ doc.url | replace: '/', '' | replace: '.', '' }}">
-            {{doc.title}}
-            {% if doc.type %}<span class="endpoint {{doc.type}}"></span> {% endif %}</a>
-            {% if doc.level == 1 %}
-              </h1>
-            {% endif %}
-            {% if doc.level == 2 %}
-              </h2>
-            {% endif %}
-          {% if doc.description %}
-            <p class="description">{{doc.description}}</p>
-          {% endif %}
+<section id="teaser" class="start">
+  <div class="container">
+    <h1>Communote<br />
+      <small>Open Communication for Teams</small>
+    </h1>
+    <div class="teaser-wrapper">
+      <div class="functions-teaser">
+        <ul class="icon-bar">
+          <li>
+            <img src="images/func/1.png" />
+            <span>Communicate</span>
+          </li>
+          <li>
+            <img src="images/func/2.png" />
+            <span>Structure</span>
+          </li>
+          <li>
+            <img src="images/func/3.png" />
+            <span>Search & Find</span>
+          </li>
+          <li>
+            <img src="images/func/4.png" />
+            <span>Network</span>
+          </li>
+        </ul>
+      </div>
+      <div class="images-teaser">
+        <div id="fc-slideshow" class="fc-slideshow">
+        	<ul class="fc-slides">
+        		<li><img src="images/slide/1.jpg" /></li>
+            <li><img src="images/slide/2.jpg" /></li>
+            <li><img src="images/slide/3.jpg" /></li>
+        	</ul>
+        </div>
+      </div>
+    </div>
+    <div class="call-to-action-wrapper">
+      <a href="#" class="download btn">Download Communote</a>
+    </div>
+  </div>
+</section>
+<section id="features">
+  <div class="container">
+    <h2>Important features</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <ul class="feature-list">
+          <li><span class="ion ion-paper-airplane"></span><h3>Rich text editor for status updates, notes and memos</h3></li>
+          <li><span class="ion ion-pound"></span><h3>Hashtags, @mentions and direct messages</h3></li>
+          <li><span class="ion ion-person-stalker"></span><h3>Spaces for groups and teams</h3></li>
+          <li><span class="ion ion-ios-chatboxes-outline"></span><h3>Activity streams incl. discussion threads</h3></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="feature-list">
+          <li><span class="ion ion-ios-locked"></span><h3>Access control to ensure privacy</h3></li>
+          <li><span class="ion ion-earth"></span><h3>Multiple languages (en, de, es, it, fr)</h3></li>
+          <li><span class="ion ion-ios-search-strong"></span><h3>Fulltext search and filtering</h3></li>
+          <li><span class="ion ion-network"></span><h3>User- and usergroup management with LDAP integration</h3></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="feature-list">
+          <li><span class="ion ion-social-github"></span><h3>Open Source and free</h3></li>
+          <li><span class="ion ion-log-in"></span><h3>API for access, integration and automation</h3></li>
+          <li><span class="ion ion-ios-lightbulb"></span><h3>Plugin interface to extend the functionality</h3></li>
+          <li><span class="ion ion-more"></span><h3>and more</h3></li>
+        </ul>
+      </div>
+    </div>
+    <div class="call-to-action-wrapper">
+      <a href="/doc/home.html" class="documentation btn">Explore Documentation</a>
+    </div>
+  </div>
+</section>
 
-          {% if doc.parameters %}
-            <h6> {{ doc.parameters.title }} </h6>
-            <dl class="parameters">
-              {% for parameter in doc.parameters.data %}
-                {% for k in parameter %}
-                <dt>{{k[0]}}</dt>
-                <dd>
-                  <strong> {{k[1][0]}} </strong>
-                  <br />
-                  {{k[1][1]}}
-                  </dd>
-                {% endfor %}
-              {% endfor %}
-            </dl>
-          {% endif %}
+<section id="get-started">
+  <div class="container">
+    <h2>Get started!</h2>
+    <ul class="steps">
+      <li class="step">
+        <a href="#">
+          <span class="ion ion-map"></span>
+          <span class="icon-label">Explore the documentation!</span>
+        </a>
+      </li>
+      <li class="visible-lg">
+        <img src="images/arrow.png"/>
+      </li>
+      <li class="step">
+        <a href="#">
+          <span class="ion ion-bug"></span>
+          <span class="icon-label">Solve tasks <br class="visible-lg" />and report bugs</span>
+        </a>
+      </li>
+      <li class="visible-lg">
+        <img src="images/arrow.png"/>
+      </li>
+      <li class="step">
+        <a href="#">
+          <span class="ion ion-ios-color-wand-outline"></span>
+          <span class="icon-label">Develop cool Plugins and get fame!</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
 
-          {{doc.content}}
-        </section>
-      </section>
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+<section id="service">
+  <div class="container">
+    <h2>Need professional help?</h2>
+    <div class="row content">
+      <div class="col-md-3">
+        <a href="http://www.communardo.de"><img src="images/logo-communardo.png"/ alt="Communardo Software GmbH"></a>
+      </div>
+      <div class="col-md-9"><p>... check out <a href="http://www.communardo.de/">Communardo</a> for enterprise support, hosting, development or consulting services.</p></div>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.flipshow.js"></script>
+<script type="text/javascript">
+  $( function() {
+    $( '#fc-slideshow' ).flipshow();
+
+    setInterval( function() {
+      $("#fc-slideshow div.fc-right span:first").click();
+    }, 3000);
+  });
+</script>

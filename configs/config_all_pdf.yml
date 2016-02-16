@@ -1,0 +1,15 @@
+destination: pdf
+url: "http://127.0.0.1:4009"
+baseurl: "/pdf"
+port: 4009
+output: pdf
+print_title: Communote Documentation
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page_print"
+      comments: true
+      search: true
