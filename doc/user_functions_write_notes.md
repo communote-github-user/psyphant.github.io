@@ -5,7 +5,7 @@ keywords: functions, editor, notes, move, like, attachments, mentions
 last_updated: March 10, 2016
 ---
 
-Using Comunote you can quickly and easily write notes, messages or protocols. You are thereby not - unlike other microblogging services - limited to a number of letters. You can add easy formats to your note and attach any kind of data to it. Pictures with the formats JPG, PNG or GIF will automatically be transformed into a preview within the note. It is possible to attach a video-link from YouTube or Vimeo, witch will be embed into Communote. You can also notify your colleagues using @mentions.
+Using Communote you can quickly and easily write notes, messages or protocols. You are thereby not - unlike other microblogging services - limited to a number of letters. You can add easy formats to your note and attach any kind of data to it. Pictures with the formats JPG, PNG or GIF will automatically be transformed into a preview within the note. It is possible to attach a video-link from YouTube or Vimeo, witch will be embed into Communote. You can also notify your colleagues using @mentions.
 
 ## 2.1.1 The Editor
 
@@ -41,7 +41,7 @@ _Figure "Using tags in the editor"_
 
 Communote offers the possibility of adding attachments to the note and sharing them with other users. The standard configuration limits the data size to 10 MB. Please contact your Administrator, if you would like to know the exact size limit of the attachments.
 
-You can add an attachment to your note by chosing the option "attachments" below the editor. You can now choose a file from your computer and add it to your note. Before sending in your note, you can re-check the attachment and erase it if that's necessary.
+You can add an attachment to your note by choosing the option "attachments" below the editor. You can now choose a file from your computer and add it to your note. Before sending in your note, you can re-check the attachment and erase it if that's necessary.
 
 ![](images/editor_attachments.png)
 
@@ -78,7 +78,7 @@ _**Note:** Direct messages can only be sent to @@managers._
 
 _Abbildung "Address certain groups of users"_
 
-The standard configuration limits @@-mentions to 100 users. If one of the groups represents more than 100 users, the @@-function can not be used and the message won't be sent. You will receive an appropriate error message in that case. The limit which is configurable is helpful for larger companys to avoid excessive email traffic.
+The standard configuration limits @@-mentions to 100 users. If one of the groups represents more than 100 users, the @@-function can not be used and the message won't be sent. You will receive an appropriate error message in that case. The limit which is configurable is helpful for larger companies to avoid excessive email traffic.
 
 ### 2.1.1.5 Links
 
@@ -110,7 +110,7 @@ _Figure "Automatic Backup of a Note"_
 
 ## 2.1.2 Comment and answer notes
 
-If you have write access to a topic, you can answer to any message within that topic in order to give your colleagues feedback. The functionality of the answer-editor is identical to the editor for witing notes with one exception: The topic is already predefined and cannot be changed.
+If you have write access to a topic, you can answer to any message within that topic in order to give your colleagues feedback. The functionality of the answer-editor is identical to the editor for writing notes with one exception: The topic is already predefined and cannot be changed.
 
 In order to write an answer, you can pass the specific note and then click "answer". The editor will now open and by default the author will be notified. You can send your note by clicking "send" or by using the shortage CTRL+Enter.
 
@@ -162,7 +162,7 @@ You can write new notes via E-Mail, without being logged into the Communote syst
 
 You can find the email address of the topic in the profile of the topic. In order to get there you choose a topic via "Select and Open" and then click onto "Info" in the horizontal navigation below the banner (Figure "Topic Information"). The email address will be shown in the information that is shown here. If there is no address to be found, the function may be disabled in your system.
 
-Depending on the configuration of the system, a topic can have a unique email address or there may be only a systemwide address for all topics. In case there is only a systemwide address, you specify the topic in the reference headline.
+Depending on the configuration of the system, a topic can have a unique email address or there may be only a system-wide address for all topics. In case there is only a system-wide address, you specify the topic in the reference headline.
 
 ![](images/topic_infos.png)
 
@@ -174,30 +174,30 @@ If you would like to send in a note via e-mail, you need to use the address of y
 
 _Figure "Send a note via e-mail"_
 
-If you receive an email with a notification about a new note you can also use the answer function of your email programm. Communote will transfer your answer into a regular Communote note. Answer will remain within a discussion and the topic remains the same.
+If you receive an email with a notification about a new note you can also use the answer function of your email program. Communote will transfer your answer into a regular Communote note. Answer will remain within a discussion and the topic remains the same.
 
 Important: Don't change the address or the subject headline of the email!
 
 **If you would like to send a note from you mailaccount, the following conditions apply:**
 
-*   You need to have a **valid user's account** for the communote system.
+*   You need to have a **valid user's account** for the Communote system.
 *   You need to write from the email address that is **connected to your Communote user's account**
-*   The subject headline is import if there is only a systemwide mail address. If there is a specific address for your topic, the headline will not be in use.
+*   The subject headline is import if there is only a system-wide mail address. If there is a specific address for your topic, the headline will not be in use.
 *   If you want to answer to a note, you need to use the **reply function.** Otherwise there will be a new note, not an answer.
 
 ## 2.1.7 Direct Messages
 
 Direct messages are private messages between two or more users. They are only visible to the author and the addressee(s) and can be written as a response to another note or as a new note, but it has to be marked as a direct message within the note and it must be addressed to one or more specific users.
 
-Again there are two options for marking a note as a direct message. You can either mark it directly in the message by starting the note with a d (for direct message) followed by a space and then followed by the mentioning of the addressee (@user). If you are addressing more than one user, they must be separated by an empty space (Figure "Direct Messages"). The other way is again in the options: Below the input field of the users that you wold like to notify is a field "send as direct note". If you check that field, your message will be send as direct note.
+Again there are two options for marking a note as a direct message. You can either mark it directly in the message by starting the note with a d (for direct message) followed by a space and then followed by the mentioning of the addressee (@user). If you are addressing more than one user, they must be separated by an empty space (Figure "Direct Messages"). The other way is again in the options: Below the input field of the users that you would like to notify is a field "send as direct note". If you check that field, your message will be send as direct note.
 
 ![](images/editor_dm.png)
 
-_Figure "Direct Messages": Mark a test as a direct message_
+_Figure "Direct Messages": Mark a note as a direct message_
 
 If you have write access to a topic, you can directly answer to the note. You can now either answer all addressee of the note or only a selection. It is not possible to include additional users in an answer to a direct message.
 
-**If you would like to send a direkt message, the following conditions apply:**
+**If you would like to send a direct message, the following conditions apply:**
 
 *   A direct message can be edited and erased as long as there is no answer to it yet.
 *   A direct message can be transformed into a "normal" message via editing.
