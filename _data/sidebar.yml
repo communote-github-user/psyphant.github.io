@@ -26,19 +26,19 @@ entries:
   - title: Overview
     audience: users, developers
     version: all
-    output: web, pdf
+    output: web
     items:
     - title: Introduction
       url: /doc/home.html
       audience: users, developers, admins
       version: all
-      output: web, pdf
+      output: web
 
     - title: Feature List
       url: /doc/doc_features.html
       audience: users
       version: all
-      output: web, pdf
+      output: web
 
   - title: User Documentation
     audience: users
@@ -136,17 +136,17 @@ entries:
         version: all
         output: web, pdf
     - title: 2 Layout & Components
-      url: nil
+      url: /doc/dev_layout.html
       audience: developers
       version: all
       output: web, pdf
     - title: 3 Design Guidelines
-      url: nil
+      url: /doc/dev_design.html
       audience: developers
       version: all
       output: web, pdf
     - title: 4 FAQ
-      url: nil
+      url: /doc/dev_faq.html
       audience: developers
       version: all
       output: web, pdf

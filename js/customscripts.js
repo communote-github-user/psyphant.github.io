@@ -1,25 +1,61 @@
 
-$('#mysidebar').height($(".nav").height());
+//$('#sidebar').height($(".nav").height());
 
 
 $( document ).ready(function() {
 
-    //this script says, if the height of the viewport is greater than 800px, then insert affix class, which makes the nav bar float in a fixed
-    // position as your scroll. if you have a lot of nav items, this height may not work for you.
-    var h = $(window).height();
-    //console.log (h);
-    if (h > 800) {
-        $( "#mysidebar" ).attr("class", "nav affix");
-    }
-    // activate tooltips. although this is a bootstrap js function, it must be activated this way in your theme.
-    $('[data-toggle="tooltip"]').tooltip({
-        placement : 'top'
-    });
+  var sidebar = $("#sidebar"),
+      topbarHeight = $("#top-section").height(),
+      scrolling = false,
+      backToTop = ['<a href="#doc-top" class="back-to-top"><span class="ion ion-chevron-up"></span><span class="sr-only">Up</span></a>'];
 
-    /**
-     * AnchorJS
-     */
-    anchors.add('h2,h3,h4,h5');
+  $("body").append(backToTop);
+  $(".back-to-top").hide();
+
+  setTimeout(checkScrollbarPosition, 500);
+
+  $("#navigation-bar a").on("click", function(){
+    setTimeout(checkScrollbarPosition, 500);
+  });
+
+  $(window).on('resize', function(){
+    if( !scrolling ) {
+      (!window.requestAnimationFrame) ? setTimeout(checkScrollbarPosition, 300) : window.requestAnimationFrame(checkScrollbarPosition);
+      scrolling = true;
+    }
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) { // Wenn 100 Pixel gescrolled wurde
+			$('.back-to-top').fadeIn();
+		} else {
+			$('.back-to-top').fadeOut();
+		}
+  });
+
+  function checkScrollbarPosition() {
+    var h = $(window).height();
+    if (sidebar.height() < (h-topbarHeight)) {
+      if(!sidebar.hasClass("affix")) {
+        sidebar.addClass("affix");
+      }
+    } else {
+      if(sidebar.hasClass("affix")) {
+        sidebar.removeClass("affix")
+      }
+    }
+    scrolling = false;
+  }
+
+  // activate tooltips. although this is a bootstrap js function, it must be activated this way in your theme.
+  $('[data-toggle="tooltip"]').tooltip({
+      placement : 'top'
+  });
+
+  /**
+   * AnchorJS
+   */
+  anchors.add('h2,h3,h4,h5');
 
 });
 

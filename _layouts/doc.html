@@ -22,15 +22,19 @@
   <body>
     {% include topnav.html topnav=site.data.topnav %}
       <!-- Page Content -->
-      <div class="doc-wrapper">
-        {% include sidebar.html %}
-        <!-- Content Column -->
-        <div class="col-md-8 col-lg-9 doc-content">
-          {% comment %}
-            {% include algolia.html %}
-          {% endcomment %}
-          {{content}}
-        </div><!-- /.row -->
+      <div id="doc">
+        <div class="row">
+          <div class="doc-sidebar">
+            {% include sidebar.html %}
+          </div>
+          <!-- Content Column -->
+          <div class="doc-content">
+            {% comment %}
+              {% include algolia.html %}
+            {% endcomment %}
+            {{content}}
+          </div><!-- /.row -->
+        </div>
       </div>    <!-- /.container -->
   </body>
 </html>

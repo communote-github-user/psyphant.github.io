@@ -28,13 +28,11 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
     content: "";
 }
 
-
 @page {
-    margin: 60pt 90pt 60pt 90pt;
-    font-family: sans-serif;
-    font-style:none;
-    color: gray;
-
+  margin: 25mm 25mm 25mm 25mm;
+  font-family: sans-serif;
+  font-style: none;
+  color: gray;
 }
 
 .printTitle {
@@ -60,13 +58,9 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 }
 
 .printTitleImage {
+    margin: 0 auto;
     max-width:300px;
-    margin-bottom:200px;
-}
-
-
-.printTitleImage {
-    max-width: 250px;
+    margin-bottom:50px;
 }
 
 #navig {
@@ -157,4 +151,3 @@ h1 { string-set: doctitle content() }
 pre {
     background-color: #fafafa;
 }
-

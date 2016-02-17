@@ -3,14 +3,14 @@
 	// The mappings of source directory and output directory
 	"mappings": [
 		// {
-		// 	"src": "less",
-		// 	"dest": "css"
+		// 	"src": "less/global.less",
+		// 	"dest": "css/global.css"
 		// }
 	],
 
 	// Add the ignore rules that Koala will not search them.
 	// e.g. ["*.json", "*.txt", "test", "path/libs"]
-	"ignores": ["*.css", "bootstrap"],
+	"ignores": ["*.css", "bootstrap", "_site"],
 
 	// Compile options of LESS.
 	"options": {
@@ -19,7 +19,7 @@
 		"outputStyle": "normal",
 
 		// Outputs filename and line numbers, which will output the debug info within comments.
-		"lineComments": false,
+		"lineComments": true,
 
 		// Outputs filename and line numbers, which will output the information within a fake media query which is compatible with the SASS format.
 		"debugInfo": false,
@@ -29,7 +29,7 @@
 		"strictUnits": false,
 
         // Create sourcemap files next to the generated CSS files
-		"sourceMap": false,
+		"sourceMap": true,
 
         // auto add vendor prefixes to rules
         "autoprefix": false

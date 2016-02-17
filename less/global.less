@@ -1,0 +1,90 @@
+// First: Import Bootstrap
+@import "bootstrap/bootstrap.less";
+
+body {
+  font-family: 'OpenSans';
+  line-height: 2;
+  #top-section {
+    position: relative;
+    z-index: 1;
+  }
+  #header {
+    .container();
+    text-align: center;
+    padding: 0 10px;
+    img {
+      margin-bottom: 30px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 278px;
+    }
+  }
+
+  #main-navigation {
+    background-color: #f59350;
+    @media (min-width: @screen-sm-min) {
+      height: 65px;
+      border-bottom: 4px solid #E28C51;
+    }
+    ul {
+      display: flex;
+      text-align: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        flex: 1 1 auto;
+        height: 65px;
+        a {
+          color: #FFFFFF;
+          display: block;
+          padding: 5px 10px;
+          line-height: 55px;
+          height: 65px;
+          .ion {
+            font-size: 32px;
+          }
+        }
+        &.home {
+          a {
+            padding-top: 10px;
+          }
+        }
+      }
+      @media (min-width: @screen-sm-min) {
+        font-size: @font-size-large;
+        max-width: 500px;
+        margin: auto;
+        li {
+          border-bottom: 5px solid transparent;
+          &:hover, &.active{
+            border-color: #FFFFFF;
+          }
+        }
+      }
+      .active a, a:hover, a:focus {
+        text-decoration: none;
+        background-color: #f38031;
+        border-bottom: 5px solid;
+        color: #FFFFFF;
+        height: 65px;
+      }
+    }
+  }
+
+  .back-to-top {
+    background-color: #f38031;
+    bottom: 50px;
+    border-radius: 100%;
+    color: #FFFFFF;
+    position: fixed;
+    right: 50px;
+    height: 46px;
+    width: 46px;
+    text-align: center;
+    padding-top: 8px;
+  }
+
+  @import "sites.less";
+  @import "doc.less";
+}
