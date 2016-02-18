@@ -6,7 +6,9 @@ body {
 }
 .nav ul li a {border-top:0px; background-color:transparent; color: #808080; }
 #navig a[href] {color: #595959 !important;}
-table .table {max-width:650px;}
+table, img {
+  max-width: 160mm;
+}
 
 #navig li.sectionHead {font-weight: bold; font-size: 18px; color: #595959 !important; }
 #navig li {font-weight: normal; }
@@ -147,4 +149,52 @@ h1 { string-set: doctitle content() }
 
 pre {
     background-color: #fafafa;
+}
+
+table {
+  background-color: transparent;
+  margin-bottom: 20px;
+  border: 1px solid #dedede;
+}
+
+th {
+  text-align: left;
+}
+
+thead > tr > th,
+tbody > tr > th,
+tfoot > tr > th,
+thead > tr > td,
+tbody > tr > td,
+tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  text-transform: uppercase;
+  background-color: #DDDDDD;
+  color: #121212;
+  text-align: center;
+}
+
+caption + thead > tr:first-child > th,
+colgroup + thead > tr:first-child > th,
+thead:first-child > tr:first-child > th,
+caption + thead > tr:first-child > td,
+colgroup + thead > tr:first-child > td,
+thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+table tr td {
+  hyphens: auto;
 }
