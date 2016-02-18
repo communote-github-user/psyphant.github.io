@@ -1,6 +1,9 @@
 // First: Import Bootstrap
 @import "bootstrap/bootstrap.less";
 
+@orange: #f59350;
+@orange-highlight: #f38031;
+
 @keyframes bounce-right {
   0% {
     opacity: .2;
@@ -77,10 +80,10 @@ body {
   }
 
   #main-navigation {
-    background-color: #f59350;
+    background-color: @orange;
     @media (min-width: @screen-sm-min) {
       height: 65px;
-      border-bottom: 4px solid #E28C51;
+      border-bottom: 4px solid mix(@orange, black, 94%);
     }
     ul {
       display: flex;
@@ -120,7 +123,7 @@ body {
       }
       .active a, a:hover, a:focus {
         text-decoration: none;
-        background-color: #f38031;
+        background-color: @orange-highlight;
         border-bottom: 5px solid;
         color: #FFFFFF;
         height: 65px;
@@ -129,9 +132,10 @@ body {
   }
 
   .back-to-top {
-    background-color: #f38031;
+    background-color: @orange;
     bottom: 50px;
     border-radius: 100%;
+    border-bottom: 3px solid @orange-highlight;
     color: #FFFFFF;
     position: fixed;
     right: 50px;

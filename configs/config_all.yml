@@ -12,13 +12,6 @@ project_folder: doc
 github_editme_path: communote/communote.github.io
 disqus_shortname: communote-doc
 
-# the algolia entries here are experimental only.
-
-#gems:
-#  - algoliasearch-jekyll
-#algolia:
-#  application_id: 'HXUBJERYYB'
-#  index_name:     'documentation_theme_jekyll_developers'
 port: 4010
 
 exclude:
