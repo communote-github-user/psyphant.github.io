@@ -6814,8 +6814,8 @@ body #sites #get-started {
 }
 /* line 251, sites.less */
 body #sites #get-started h2 {
+  color: #FFFFFF;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-  opacity: 0.8;
   margin-bottom: 50px;
 }
 /* line 257, sites.less */
@@ -6844,13 +6844,13 @@ body #sites #get-started ul li {
 }
 /* line 273, sites.less */
 body #sites #get-started ul li.step {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 12px;
 }
 /* line 277, sites.less */
 body #sites #get-started ul li.step:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 /* line 281, sites.less */
 body #sites #get-started ul li .ion {
@@ -6863,7 +6863,7 @@ body #sites #get-started ul li .icon-label {
 /* line 287, sites.less */
 body #sites #get-started ul li a {
   display: block;
-  color: #121214;
+  color: #FFFFFF;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
 /* line 291, sites.less */
