@@ -6526,21 +6526,25 @@ body #sites #teaser h1 {
   font-weight: 600;
   margin-top: 35px;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-  opacity: 0.8;
+  color: #FFFFFF;
 }
-/* line 17, sites.less */
+/* line 15, sites.less */
+body #sites #teaser h1 small {
+  color: #FFFFFF;
+}
+/* line 20, sites.less */
 body #sites #teaser .teaser-wrapper {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
-/* line 22, sites.less */
+/* line 25, sites.less */
 body #sites #teaser .teaser-wrapper .functions-teaser {
   flex: 3;
   margin-top: 60px;
   margin-right: 30px;
 }
-/* line 26, sites.less */
+/* line 29, sites.less */
 body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar {
   display: flex;
   flex-wrap: wrap;
@@ -6549,19 +6553,19 @@ body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar {
   margin: 35px -10px 0;
   overflow: hidden;
 }
-/* line 33, sites.less */
+/* line 36, sites.less */
 body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar li {
   flex: 1;
   text-align: center;
   margin: 0 10px;
 }
 @media (max-width: 1199px) {
-  /* line 38, sites.less */
+  /* line 41, sites.less */
   body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar li img {
     width: 110px;
   }
 }
-/* line 42, sites.less */
+/* line 45, sites.less */
 body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar li span {
   display: block;
   color: #FFF;
@@ -6573,31 +6577,31 @@ body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar li span {
   border-radius: 5px;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
-/* line 57, sites.less */
+/* line 60, sites.less */
 body #sites #teaser .teaser-wrapper .images-teaser {
   flex: 1;
 }
-/* line 59, sites.less */
+/* line 62, sites.less */
 body #sites #teaser .teaser-wrapper .images-teaser .fc-slideshow {
   margin-top: 35px;
   width: 400px;
   height: 400px;
 }
 @media (max-width: 1199px) {
-  /* line 63, sites.less */
+  /* line 66, sites.less */
   body #sites #teaser .teaser-wrapper .images-teaser .fc-slideshow {
     width: 360px;
     height: 360px;
   }
 }
 @media (max-width: 991px) {
-  /* line 67, sites.less */
+  /* line 70, sites.less */
   body #sites #teaser .teaser-wrapper .images-teaser .fc-slideshow {
     width: 270px;
     height: 270px;
   }
 }
-/* line 75, sites.less */
+/* line 78, sites.less */
 body #sites #teaser .description {
   font-size: 20px;
   line-height: 1.8;
@@ -6607,7 +6611,7 @@ body #sites #teaser .description {
   padding: 15px;
   position: relative;
 }
-/* line 84, sites.less */
+/* line 87, sites.less */
 body #sites #teaser .description:after {
   bottom: 100%;
   left: 10%;
@@ -6618,7 +6622,7 @@ body #sites #teaser .description:after {
   position: absolute;
   pointer-events: none;
 }
-/* line 95, sites.less */
+/* line 98, sites.less */
 body #sites #teaser .description:after {
   border-color: rgba(255, 255, 255, 0);
   border-bottom-color: white;
@@ -6626,49 +6630,49 @@ body #sites #teaser .description:after {
   margin-left: -21px;
 }
 @media (max-width: 991px) {
-  /* line 102, sites.less */
+  /* line 105, sites.less */
   body #sites #teaser {
     background-size: cover;
     padding-bottom: 50px;
   }
-  /* line 105, sites.less */
+  /* line 108, sites.less */
   body #sites #teaser .teaser-wrapper .functions-teaser {
     flex: 100%;
     margin-top: 0;
     margin-right: 0;
   }
-  /* line 109, sites.less */
+  /* line 112, sites.less */
   body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar {
     flex-wrap: nowrap;
   }
-  /* line 121, sites.less */
+  /* line 124, sites.less */
   body #sites #teaser .description:after {
     left: 50%;
   }
 }
 @media (max-width: 991px) and (max-width: 767px) {
-  /* line 111, sites.less */
+  /* line 114, sites.less */
   body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar {
     flex-wrap: wrap;
     margin-bottom: 0;
   }
-  /* line 114, sites.less */
+  /* line 117, sites.less */
   body #sites #teaser .teaser-wrapper .functions-teaser .icon-bar li {
     flex-basis: 35%;
     margin-bottom: 15px;
   }
 }
-/* line 126, sites.less */
+/* line 129, sites.less */
 body #sites #teaser.start h1 {
   position: absolute;
 }
 @media (max-width: 991px) {
-  /* line 128, sites.less */
+  /* line 131, sites.less */
   body #sites #teaser.start h1 {
     position: relative;
   }
 }
-/* line 134, sites.less */
+/* line 137, sites.less */
 body #sites #teaser h1,
 body #sites #teaser .functions-teaser,
 body #sites #teaser .images-teaser,
@@ -6677,90 +6681,90 @@ body #sites #teaser .description {
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
-/* line 143, sites.less */
+/* line 146, sites.less */
 body #sites #teaser h1 {
   animation-name: bounce-right;
   animation-duration: 0.6s;
 }
-/* line 148, sites.less */
+/* line 151, sites.less */
 body #sites #teaser .functions-teaser,
 body #sites #teaser .description {
   animation-name: bounce-left;
   animation-duration: 0.6s;
 }
-/* line 153, sites.less */
+/* line 156, sites.less */
 body #sites #teaser .images-teaser {
   animation-name: bounce-rotate;
   animation-duration: 0.5s;
   animation-delay: 0.4s;
 }
 @keyframes bounce-right {
-  /* line 160, sites.less */
+  /* line 163, sites.less */
   0% {
     opacity: .2;
     transform: translateX(-200px);
   }
-  /* line 164, sites.less */
+  /* line 167, sites.less */
   60% {
     opacity: .7;
     transform: translateX(15px);
   }
-  /* line 168, sites.less */
+  /* line 171, sites.less */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 @keyframes bounce-left {
-  /* line 175, sites.less */
+  /* line 178, sites.less */
   0% {
     opacity: .2;
     transform: translateX(200px);
   }
-  /* line 179, sites.less */
+  /* line 182, sites.less */
   60% {
     opacity: .7;
     transform: translateX(-15px);
   }
-  /* line 183, sites.less */
+  /* line 186, sites.less */
   100% {
     opacity: 1;
     transform: translateX(0);
   }
 }
 @keyframes bounce-rotate {
-  /* line 190, sites.less */
+  /* line 193, sites.less */
   0% {
     opacity: .2;
     transform: perspective(800px) rotateX(-80deg);
   }
-  /* line 194, sites.less */
+  /* line 197, sites.less */
   20% {
     opacity: 1;
   }
-  /* line 197, sites.less */
+  /* line 200, sites.less */
   60% {
     transform: perspective(800px) rotateX(20deg);
   }
-  /* line 200, sites.less */
+  /* line 203, sites.less */
   100% {
     opacity: 1;
     transform: perspective(800px) rotateX(0);
   }
 }
-/* line 208, sites.less */
+/* line 211, sites.less */
 body #sites #features {
   position: relative;
   min-height: 380px;
   margin-top: 35px;
 }
-/* line 212, sites.less */
+/* line 215, sites.less */
 body #sites #features .features-lists {
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: 40px;
 }
-/* line 215, sites.less */
+/* line 218, sites.less */
 body #sites #features .features-lists .feature-list {
   position: relative;
   min-height: 1px;
@@ -6776,30 +6780,30 @@ body #sites #features .features-lists .feature-list {
     width: 33.33333333%;
   }
 }
-/* line 219, sites.less */
+/* line 222, sites.less */
 body #sites #features .features-lists .feature-list li {
   padding-bottom: 2px;
 }
-/* line 221, sites.less */
+/* line 224, sites.less */
 body #sites #features .features-lists .feature-list li span {
   color: #777;
   float: left;
   font-size: 24px;
   text-align: center;
 }
-/* line 226, sites.less */
+/* line 229, sites.less */
 body #sites #features .features-lists .feature-list li span:before {
   min-width: 25px;
   position: absolute;
 }
-/* line 231, sites.less */
+/* line 234, sites.less */
 body #sites #features .features-lists .feature-list li h3 {
   font-size: 16px;
   font-weight: 500;
   margin-left: 40px;
   line-height: 1.5;
 }
-/* line 242, sites.less */
+/* line 245, sites.less */
 body #sites #get-started {
   background-image: url("../images/blur_bg2.jpg");
   min-height: 380px;
@@ -6807,18 +6811,18 @@ body #sites #get-started {
   position: relative;
 }
 @media (max-width: 1199px) {
-  /* line 246, sites.less */
+  /* line 249, sites.less */
   body #sites #get-started {
     background-size: cover;
   }
 }
-/* line 251, sites.less */
+/* line 254, sites.less */
 body #sites #get-started h2 {
   color: #FFFFFF;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   margin-bottom: 50px;
 }
-/* line 257, sites.less */
+/* line 260, sites.less */
 body #sites #get-started ul {
   list-style-type: none;
   font-size: 20px;
@@ -6827,59 +6831,59 @@ body #sites #get-started ul {
   padding: 0;
 }
 @media (max-width: 1199px) {
-  /* line 263, sites.less */
+  /* line 266, sites.less */
   body #sites #get-started ul {
     flex-direction: column;
   }
-  /* line 265, sites.less */
+  /* line 268, sites.less */
   body #sites #get-started ul li {
     margin-bottom: 20px;
     width: 100%;
   }
 }
-/* line 270, sites.less */
+/* line 273, sites.less */
 body #sites #get-started ul li {
   flex: 1;
   text-align: center;
 }
-/* line 273, sites.less */
+/* line 276, sites.less */
 body #sites #get-started ul li.step {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 12px;
 }
-/* line 277, sites.less */
+/* line 280, sites.less */
 body #sites #get-started ul li.step:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 281, sites.less */
+/* line 284, sites.less */
 body #sites #get-started ul li .ion {
   font-size: 40px;
 }
-/* line 284, sites.less */
+/* line 287, sites.less */
 body #sites #get-started ul li .icon-label {
   display: block;
 }
-/* line 287, sites.less */
+/* line 290, sites.less */
 body #sites #get-started ul li a {
   display: block;
   color: #FFFFFF;
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
-/* line 291, sites.less */
+/* line 294, sites.less */
 body #sites #get-started ul li a:hover {
   text-decoration: none;
 }
-/* line 299, sites.less */
+/* line 302, sites.less */
 body #sites #service {
   margin-bottom: 60px;
   margin-top: 35px;
 }
-/* line 302, sites.less */
+/* line 305, sites.less */
 body #sites #service img {
   margin-bottom: 15px;
 }
-/* line 307, sites.less */
+/* line 310, sites.less */
 body #sites .call-to-action-wrapper {
   position: absolute;
   left: 0;
@@ -6888,7 +6892,7 @@ body #sites .call-to-action-wrapper {
   text-align: center;
   z-index: 2;
 }
-/* line 314, sites.less */
+/* line 317, sites.less */
 body #sites .call-to-action-wrapper a.btn {
   padding: 10px 16px;
   font-size: 20px;
@@ -6900,12 +6904,12 @@ body #sites .call-to-action-wrapper a.btn {
   font-weight: 600;
   padding: 15px 30px;
 }
-/* line 322, sites.less */
+/* line 325, sites.less */
 body #sites .call-to-action-wrapper a.btn:hover {
   border-bottom-width: 1px;
   color: #FFFFFF;
 }
-/* line 328, sites.less */
+/* line 331, sites.less */
 body #sites #not-found {
   background-image: url("../images/blur_bg2.jpg");
   min-height: 380px;
@@ -6913,18 +6917,18 @@ body #sites #not-found {
   position: relative;
 }
 @media (max-width: 1199px) {
-  /* line 332, sites.less */
+  /* line 335, sites.less */
   body #sites #not-found {
     background-size: cover;
   }
 }
-/* line 337, sites.less */
+/* line 340, sites.less */
 body #sites #not-found h1 {
   text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   opacity: 0.8;
   margin-bottom: 50px;
 }
-/* line 343, sites.less */
+/* line 346, sites.less */
 body #sites h2 {
   margin-bottom: 30px;
   line-height: 1.5;
