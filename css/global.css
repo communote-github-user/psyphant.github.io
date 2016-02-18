@@ -7323,16 +7323,24 @@ body #doc .doc-content div#toc > ul::before {
   padding-bottom: 20px;
   padding-left: 10px;
 }
-/* line 327, doc.less */
+/* line 325, doc.less */
+body #doc .doc-content .privacy-wrapper {
+  text-align: center;
+}
+/* line 328, doc.less */
+body #doc .doc-content .privacy-wrapper .btn .ion {
+  margin-right: 10px;
+}
+/* line 336, doc.less */
 body #definition-box-container div a.active {
   font-weight: bold;
 }
-/* line 331, doc.less */
+/* line 340, doc.less */
 body p.post-meta {
   font-size: 80%;
   color: #777;
 }
-/* line 333, doc.less */
+/* line 342, doc.less */
 body .entry-date {
   font-size: 14px;
   font-size: 0.875rem;
@@ -7340,11 +7348,11 @@ body .entry-date {
   margin-bottom: 0;
   text-transform: uppercase;
 }
-/* line 335, doc.less */
+/* line 344, doc.less */
 body .footer {
   text-align: center;
 }
-/* line 339, doc.less */
+/* line 348, doc.less */
 body figcaption {
   padding-bottom: 12px;
   padding-top: 6px;
@@ -7353,57 +7361,57 @@ body figcaption {
   font-style: italic;
   color: gray;
 }
-/* line 349, doc.less */
+/* line 358, doc.less */
 body table.dataTable thead {
   background-color: #444;
 }
-/* line 352, doc.less */
+/* line 361, doc.less */
 body table td {
   hyphens: auto;
 }
-/* line 356, doc.less */
+/* line 365, doc.less */
 body section table tr.success {
   background-color: #dff0d8 !important;
 }
-/* line 360, doc.less */
+/* line 369, doc.less */
 body table tr.info {
   background-color: #d9edf7 !important;
 }
-/* line 364, doc.less */
+/* line 373, doc.less */
 body section table tr.warning,
 body table tr.testing,
 body table tr.testing > td.sorting_1 {
   background-color: #fcf8e3 !important;
 }
-/* line 367, doc.less */
+/* line 376, doc.less */
 body section table tr.danger,
 body table tr.preference,
 body table tr.preference > td.sorting_1 {
   background-color: #f2dede !important;
 }
-/* line 371, doc.less */
+/* line 380, doc.less */
 body table.profile thead tr th {
   background-color: #248ec2;
 }
-/* line 375, doc.less */
+/* line 384, doc.less */
 body table.request thead tr th {
   background-color: #ED1951;
 }
-/* line 379, doc.less */
+/* line 388, doc.less */
 body span.myLabel {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 384, doc.less */
+/* line 393, doc.less */
 body button.cursorNorm {
   cursor: default;
 }
-/* line 388, doc.less */
+/* line 397, doc.less */
 body a.dropdown-toggle,
 body .navbar-inverse .navbar-nav > li > a {
   margin-left: 10px;
 }
-/* line 392, doc.less */
+/* line 401, doc.less */
 body hr.faded {
   border: 0;
   height: 1px;
@@ -7412,7 +7420,7 @@ body hr.faded {
   background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
-/* line 401, doc.less */
+/* line 410, doc.less */
 body hr.shaded {
   height: 12px;
   border: 0;
@@ -7422,16 +7430,16 @@ body hr.shaded {
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 411, doc.less */
+/* line 420, doc.less */
 body i.border {
   padding: 10px 20px;
   background-color: whitesmoke;
 }
-/* line 416, doc.less */
+/* line 425, doc.less */
 body a[data-toggle] {
   color: #248EC2;
 }
-/* line 420, doc.less */
+/* line 429, doc.less */
 body .summary {
   font-size: 120%;
   color: #808080;
@@ -7439,60 +7447,60 @@ body .summary {
   border-left: 5px solid #ED1951;
   padding-left: 10px;
 }
-/* line 428, doc.less */
+/* line 437, doc.less */
 body .summary:before {
   content: "Summary: ";
   font-weight: bold;
 }
-/* line 433, doc.less */
+/* line 442, doc.less */
 body ol li ol li {
   list-style-type: lower-alpha;
 }
-/* line 435, doc.less */
+/* line 444, doc.less */
 body li img {
   clear: both;
 }
-/* line 437, doc.less */
+/* line 446, doc.less */
 body .tab-content {
   padding: 15px;
   background-color: #FAFAFA;
 }
-/* line 442, doc.less */
+/* line 451, doc.less */
 body span.tagTitle {
   font-weight: 500;
 }
-/* line 444, doc.less */
+/* line 453, doc.less */
 body li.activeSeries {
   font-weight: bold;
 }
-/* line 448, doc.less */
+/* line 457, doc.less */
 body .seriesContext .dropdown-menu li.active {
   font-weight: bold;
   margin-left: 43px;
   font-size: 18px;
 }
-/* line 454, doc.less */
+/* line 463, doc.less */
 body .alert-warning {
   color: #444;
 }
-/* line 458, doc.less */
+/* line 467, doc.less */
 body div.alert code,
 body h2 code {
   background-color: transparent !important;
 }
-/* line 462, doc.less */
+/* line 471, doc.less */
 body .alert a {
   text-decoration: underline;
 }
-/* line 466, doc.less */
+/* line 475, doc.less */
 body div.tags {
   padding: 10px 5px;
 }
-/* line 468, doc.less */
+/* line 477, doc.less */
 body .tabLabel {
   font-weight: normal;
 }
-/* line 472, doc.less */
+/* line 481, doc.less */
 body hr {
   border: 0;
   border-bottom: 1px dashed #ccc;
@@ -7502,31 +7510,31 @@ body hr {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 482, doc.less */
+/* line 491, doc.less */
 body a[data-toggle="tooltip"] {
   color: #649345;
   font-style: italic;
   cursor: default;
 }
-/* line 488, doc.less */
+/* line 497, doc.less */
 body span.muted {
   color: #666;
 }
-/* line 490, doc.less */
+/* line 499, doc.less */
 body table code {
   background-color: transparent;
 }
-/* line 492, doc.less */
+/* line 501, doc.less */
 body .highlight .err {
   color: #a61717;
   background-color: transparent !important;
 }
-/* line 497, doc.less */
+/* line 506, doc.less */
 body table p {
   margin-top: 12px;
   margin-bottom: 12px;
 }
-/* line 502, doc.less */
+/* line 511, doc.less */
 body pre,
 body table code {
   white-space: pre-wrap;
@@ -7540,29 +7548,29 @@ body table code {
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
 }
-/* line 510, doc.less */
+/* line 519, doc.less */
 body pre {
   margin: 25px 0px;
 }
-/* line 514, doc.less */
+/* line 523, doc.less */
 body code {
   word-wrap: break-word;
 }
-/* line 518, doc.less */
+/* line 527, doc.less */
 body #json-box-container pre {
   margin: 0px;
 }
-/* line 522, doc.less */
+/* line 531, doc.less */
 body .video-js {
   margin: 30px 0px;
 }
-/* line 526, doc.less */
+/* line 535, doc.less */
 body video {
   display: block;
   margin: 30px 0px;
   border: 1px solid #c0c0c0;
 }
-/* line 532, doc.less */
+/* line 541, doc.less */
 body p.required,
 body p.dataType {
   display: block;
@@ -7570,16 +7578,16 @@ body p.dataType {
   font-size: 80%;
   margin-left: 4px;
 }
-/* line 534, doc.less */
+/* line 543, doc.less */
 body .post-content img.inline {
   margin: 0px;
   margin-bottom: 6px;
 }
-/* line 538, doc.less */
+/* line 547, doc.less */
 body .panel-heading {
   font-weight: bold;
 }
-/* line 542, doc.less */
+/* line 551, doc.less */
 body .note code,
 body .alert code,
 body .warning code,
@@ -7590,61 +7598,61 @@ body h4 code {
   color: inherit;
   padding: 0px;
 }
-/* line 547, doc.less */
+/* line 556, doc.less */
 body a.accordion-toggle {
   font-style: normal;
 }
-/* line 551, doc.less */
+/* line 560, doc.less */
 body h3.codeExplanation {
   font-size: 18px;
   font-style: normal;
   color: black;
   line-height: 24px;
 }
-/* line 558, doc.less */
+/* line 567, doc.less */
 body span.soft {
   color: #c0c0c0;
 }
-/* line 562, doc.less */
+/* line 571, doc.less */
 body .parameter {
   font-family: courier;
   color: red !important;
 }
-/* line 567, doc.less */
+/* line 576, doc.less */
 body .formBoundary {
   border: 1px solid gray;
   padding: 15px;
   margin: 15px 0px;
   background-color: whitesmoke;
 }
-/* line 574, doc.less */
+/* line 583, doc.less */
 body .videoThumbs img {
   float: left;
   margin: 15px 15px 15px 0px;
   box-shadow: 2px 2px 1px #f0f0f0;
   border: 1px solid #dedede;
 }
-/* line 581, doc.less */
+/* line 590, doc.less */
 body *:hover > .anchorjs-link {
   transition: color .25s linear;
   text-decoration: none;
 }
-/* line 586, doc.less */
+/* line 595, doc.less */
 body .kbCaption {
   color: white;
   background-color: #444;
   padding: 10px;
 }
-/* line 593, doc.less */
+/* line 602, doc.less */
 body .search {
   text-align: left;
 }
-/* line 595, doc.less */
+/* line 604, doc.less */
 body .search input {
   font-size: 20px;
   width: 300px;
 }
-/* line 602, doc.less */
+/* line 611, doc.less */
 body div.results {
   position: absolute;
   background-color: white;
@@ -7652,12 +7660,12 @@ body div.results {
   margin: auto;
   text-align: left;
 }
-/* line 609, doc.less */
+/* line 618, doc.less */
 body div.results ul {
   list-style-type: none;
   padding: 0;
 }
-/* line 615, doc.less */
+/* line 624, doc.less */
 body .algolia__result-highlight {
   background-color: yellow;
   font-weight: bold;

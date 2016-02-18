@@ -63,10 +63,6 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
     margin-bottom:50px;
 }
 
-#navig {
-    /*page-break-before: always;*/
-}
-
 .copyrightBoilerplate {
     page-break-before:always;
     font-size:14px;
@@ -115,7 +111,8 @@ body.frontmatter {counter-reset: page 1}
         content: counter(page, lower-roman);
     }
     @bottom-left {
-        content: "youremail@domain.com";   }
+        content: "github@communote.com";
+    }
 }
 
 body.first_page {counter-reset: page 1}
