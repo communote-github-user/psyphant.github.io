@@ -6442,14 +6442,14 @@ body #sites #features .features-lists:after {
 @keyframes animated-bg {
   /* line 52, global.less */
   0% {
-    background-position: 0;
-  }
-  /* line 53, global.less */
-  100% {
     background-position: 700px;
   }
+  /* line 55, global.less */
+  100% {
+    background-position: -700px;
+  }
 }
-/* line 56, global.less */
+/* line 60, global.less */
 body {
   font-family: 'OpenSans';
   line-height: 2;
@@ -6457,12 +6457,12 @@ body {
   /* algolia search */
   /* algolia */
 }
-/* line 59, global.less */
+/* line 63, global.less */
 body #top-section {
   position: relative;
   z-index: 1;
 }
-/* line 63, global.less */
+/* line 67, global.less */
 body #header {
   margin-right: auto;
   margin-left: auto;
@@ -6489,25 +6489,25 @@ body #header {
     width: 1160px;
   }
 }
-/* line 67, global.less */
+/* line 71, global.less */
 body #header img {
   margin-bottom: 30px;
   margin-top: 20px;
   width: 100%;
   max-width: 278px;
 }
-/* line 75, global.less */
+/* line 79, global.less */
 body #main-navigation {
   background-color: #f59350;
 }
 @media (min-width: 768px) {
-  /* line 77, global.less */
+  /* line 81, global.less */
   body #main-navigation {
     height: 65px;
     border-bottom: 4px solid #E28C51;
   }
 }
-/* line 81, global.less */
+/* line 85, global.less */
 body #main-navigation ul {
   display: flex;
   text-align: center;
@@ -6515,12 +6515,12 @@ body #main-navigation ul {
   padding: 0;
   margin: 0;
 }
-/* line 87, global.less */
+/* line 91, global.less */
 body #main-navigation ul li {
   flex: 1 1 auto;
   height: 65px;
 }
-/* line 90, global.less */
+/* line 94, global.less */
 body #main-navigation ul li a {
   color: #FFFFFF;
   display: block;
@@ -6528,32 +6528,32 @@ body #main-navigation ul li a {
   line-height: 55px;
   height: 65px;
 }
-/* line 96, global.less */
+/* line 100, global.less */
 body #main-navigation ul li a .ion {
   font-size: 32px;
 }
-/* line 101, global.less */
+/* line 105, global.less */
 body #main-navigation ul li.home a {
   padding-top: 10px;
 }
 @media (min-width: 768px) {
-  /* line 106, global.less */
+  /* line 110, global.less */
   body #main-navigation ul {
     font-size: 20px;
     max-width: 500px;
     margin: auto;
   }
-  /* line 110, global.less */
+  /* line 114, global.less */
   body #main-navigation ul li {
     border-bottom: 5px solid transparent;
   }
-  /* line 112, global.less */
+  /* line 116, global.less */
   body #main-navigation ul li:hover,
   body #main-navigation ul li.active {
     border-color: #FFFFFF;
   }
 }
-/* line 117, global.less */
+/* line 121, global.less */
 body #main-navigation ul .active a,
 body #main-navigation ul a:hover,
 body #main-navigation ul a:focus {
@@ -6563,7 +6563,7 @@ body #main-navigation ul a:focus {
   color: #FFFFFF;
   height: 65px;
 }
-/* line 127, global.less */
+/* line 131, global.less */
 body .back-to-top {
   background-color: #f38031;
   bottom: 50px;
@@ -6588,7 +6588,7 @@ body #sites #teaser {
   /* line 8, sites.less */
   body #sites #teaser {
     animation-name: animated-bg;
-    animation-duration: 50s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -6833,7 +6833,7 @@ body #sites #get-started {
   /* line 207, sites.less */
   body #sites #get-started {
     animation-name: animated-bg;
-    animation-duration: 50s;
+    animation-duration: 60s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
