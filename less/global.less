@@ -160,18 +160,35 @@ body {
     }
   }
 
-  .back-to-top {
-    background-color: @orange;
-    bottom: 50px;
-    border-radius: 100%;
-    border-bottom: 3px solid @orange-highlight;
-    color: #FFF;
-    position: fixed;
-    right: 50px;
-    height: 46px;
-    width: 46px;
-    text-align: center;
-    padding-top: 8px;
+  #not-found {
+    .bg-wrapper {
+      background-image: url("../images/blur_bg2.jpg");
+      min-height: 180px;
+      padding-top: 35px;
+      @media (min-width: @screen-md-min) {
+        animation-name: animated-bg-second;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @media (max-width: @screen-md-max) {
+        background-size: cover;
+      }
+      position: relative;
+    }
+
+    h1 {
+      color: #FFF;
+      text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.45);
+      opacity: 0.8;
+      margin-bottom: 50px;
+      font-size: 100px;
+    }
+
+    .help-text {
+      .container();
+      margin-top: 30px;
+    }
   }
 
   @import "sites.less";
