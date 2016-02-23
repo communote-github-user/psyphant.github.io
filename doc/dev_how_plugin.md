@@ -614,23 +614,23 @@ You can download and look through other examples:
   		<tr>
   			<td><strong>Note Content Rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
-  			Overwrite the processNoteContent() and manipulate the content with their getter and setter functions of the item object.</td>
+  			Overwrite the <code class="highlighter-rouge">processNoteContent()</code> and manipulate the content with their getter and setter functions of the item object.</td>
   			<td>NoteContentRenderingPreProcessor.java (Interface)</td>
   		</tr>
   		<tr>
   			<td><strong>Note Metadata Rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
-  			Overwrite the processNote() and manipulate the metadata with their getter and setter functions of the item object.</td>
+  			Overwrite the <code class="highlighter-rouge">processNote()</code> and manipulate the metadata with their getter and setter functions of the item object.</td>
   			<td>NoteMetadataRenderingPreProcessor.java (Interface)</td>
   		</tr>
   		<tr>
   			<td><strong>Note User Notification (@user)</strong><br /><br />
-  			Allows you to control if the user receiving a notification by overwriting the function preProcess().</td>
+  			Allows you to control if the user receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
   			<td>UserNotificationNoteProcessor.java</td>
   		</tr>
   		<tr>
   			<td><strong>Note Topic Notification (@@all, @@authors and @@managers)</strong><br /><br />
-  			Allows you to control if the users of a topic receiving a notification by overwriting the function preProcess().</td>
+  			Allows you to control if the users of a topic receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
   			<td>NotificationNoteProcessor.java</td>
   		</tr>
   		<tr>
@@ -645,22 +645,22 @@ You can download and look through other examples:
   		</tr>
   		<tr>
   			<td><strong>New Note Format</strong><br /><br />
-  			Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the ActivityNoteItemTemplateProvider.</td>
+  			Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the <code class="highlighter-rouge">ActivityNoteItemTemplateProvider</code>.</td>
   			<td>CPLNoteItemTemplateProvider</td>
   		</tr>
   		<tr>
   			<td><strong>Add note meta data</strong><br /><br />
-  			Extension for the {@link ChronologicalPostListWidget} which allows adding meta-data to a note which should be available in the JavaScript frontend, for example in a NoteActionHandler or a note click handler.</td>
+  			Extension for the {@link ChronologicalPostListWidget} which allows adding meta-data to a note which should be available in the JavaScript frontend, for example in a <code class="highlighter-rouge">NoteActionHandler</code> or a note click handler.</td>
   			<td>CPLNoteMetaDataProvider</td>
   		</tr>
   		<tr>
   			<td><strong>Add note functions</strong><br /><br />
   			Extension for the ChronologicalPostListWidget which allows adding or replacing actions of a note. This extensions just provides the names of the actions. Additionally message keys for the actions which adhere to the following naming conventions must be provided and exposed to JavaScript:
   			<ul>
-  				<li>widget.chronologicalPostList.note.action.NameOfTheAction.label - the display name of the action</li>
-  				<li>widget.chronologicalPostList.note.action.NameOfTheAction.title - to provide a value for the title attribute (optional)</li>
+  				<li><code class="highlighter-rouge">widget.chronologicalPostList.note.action.NameOfTheAction.label</code> - the display name of the action</li>
+  				<li><code class="highlighter-rouge">widget.chronologicalPostList.note.action.NameOfTheAction.title</code> - to provide a value for the title attribute (optional)</li>
   			</ul>
-  			More over a JavaScript action handler has to be registered to the NoteActionHandler of the widget.</td>
+  			More over a JavaScript action handler has to be registered to the <code class="highlighter-rouge">NoteActionHandler</code> of the widget.</td>
   			<td>CPLNoteActionsProvider</td>
   		</tr>
       <tr>
@@ -681,7 +681,7 @@ You can download and look through other examples:
   		</tr>
   		<tr>
   			<td><strong>Content Type</strong><br /><br />
-        This class allows to add new content types to Communote, for instance "Video", "Image" or "Document". Content types can be used in conjunction with the ContentTypeWidget to allow filtering for content types.</td>
+        This class allows to add new content types to Communote, for instance "Video", "Image" or "Document". Content types can be used in conjunction with the <code class="highlighter-rouge">ContentTypeWidget</code> to allow filtering for content types.</td>
   			<td>ContentTypeWidgetExtension</td>
   		</tr>
   	</tbody>
@@ -731,7 +731,7 @@ The reason for the event can be that the role was added, removed or modified.</t
       </tr>
       <tr>
         <td><strong>Property changed</strong><br /><br />
-        Fired if property of any entity is created, updated or deleted. Check available types of properties at com.communote.server.core.property.PropertyType</td>
+        Fired if property of any entity is created, updated or deleted. Check available types of properties at <code class="highlighter-rouge">com.communote.server.core.property.PropertyType</code></td>
         <td>PropertyEvent</td>
       </tr>
       <tr>
@@ -755,7 +755,7 @@ Helper to initialize the application. The component provides different hooks to 
   	<tbody>
   		<tr>
   			<td><strong>After initialization complete</strong><br /><br />
-        Add a callback function that will be called after the initialization completed. If the widget framework should be initialized this callback will be invoked after any callback added with `addWidgetFrameworkInitializedCallback`.
+        Add a callback function that will be called after the initialization completed. If the widget framework should be initialized this callback will be invoked after any callback added with <code class="highlighter-rouge">addWidgetFrameworkInitializedCallback</code>.
   			</td>
   			<td>communote.initializer.addAfterInitCallbacks</td>
   		</tr>
@@ -781,7 +781,7 @@ Helper to initialize the application. The component provides different hooks to 
       </tr>
       <tr>
         <td><strong>After everything</strong><br /><br />
-        Add a callback function that will be called after everything (initializations and widget scan if required) is ready. If called after `initApplication` was called the callback will be invoked directly.</td>
+        Add a callback function that will be called after everything (initializations and widget scan if required) is ready. If called after <code class="highlighter-rouge">initApplication</code> was called the callback will be invoked directly.</td>
         <td>communote.initializer.addApplicationReadyCallbacks</td>
       </tr>
   	</tbody>
@@ -796,13 +796,13 @@ Helper to initialize the application. The component provides different hooks to 
   	<tbody>
   		<tr>
   			<td><strong>View registration</strong><br /><br />
-        New views can be added to the mainPageViewManagerConfig.views object. It is possible to extend a view (via parentViewId as parameter) or create a view from scratch.
+        New views can be added to the <code class="highlighter-rouge">mainPageViewManagerConfig.views</code> object. It is possible to extend a view (via <code class="highlighter-rouge">parentViewId</code> as parameter) or create a view from scratch.
   			</td>
   			<td>communote.configuration.mainPageViewManagerConfig.views</td>
   		</tr>
   		<tr>
   			<td><strong>Widget registration</strong><br /><br />
-          New widgets can be added (without the "Widget" suffix) to the mainPageViewManagerConfig.widgets object with the following parameters:
+          New widgets can be added (without the "Widget" suffix) to the <code class="highlighter-rouge">mainPageViewManagerConfig.widgets</code> object with the following parameters:
           <ul>
             <li>widgetType: as identifier and CSS class</li>
             <li>containerSelector: CSS selector, which says where the Widget takes place</li>
@@ -814,8 +814,8 @@ Helper to initialize the application. The component provides different hooks to 
   		<tr>
   			<td><strong>Navigation registration</strong><br /><br />
         Add a link of a view into the navigation (horizontal or vertical).
-        <br />Set the main view via the parent view ID like for example 'notesOverview', 'topicSelected' or 'userEdit' and push the view ID of the new view to it.
-        <br />The localized frontend name of the navigation point can be set via the message key "mainpage.horizontal.navigation.{Parent View ID}.{View ID}"
+        <br />Set the main view via the parent view ID like for example <code class="highlighter-rouge">notesOverview</code>, <code class="highlighter-rouge">topicSelected</code> or <code class="highlighter-rouge">userEdit</code> and push the view ID of the new view to it.
+        <br />The localized frontend name of the navigation point can be set via the message key <code class="highlighter-rouge">mainpage.horizontal.navigation.{Parent View ID}.{View ID}</code>
         </td>
   			<td>communote.configuration<br />.mainPageContexts[<strong>Parent View ID</strong>].push(<strong>View ID</strong>)</td>
   		</tr>
@@ -825,4 +825,4 @@ Helper to initialize the application. The component provides different hooks to 
 
 ### 1.2.5.5 Overwrite Templates
 
-It is possible to overwrite all the templates registered at the core.vm.tiles-mappings.properties (#ToDo: Link) with an own vm.tiles-mapping.properties file but it cannot be recommended. In the worst case the custom template stops working when a core update alters the overwritten template.
+It is possible to overwrite all the templates registered at the `core.vm.tiles-mappings.properties` (#ToDo: Link) with an own `vm.tiles-mapping.properties` file but it cannot be recommended. In the worst case the custom template stops working when a core update alters the overwritten template.
