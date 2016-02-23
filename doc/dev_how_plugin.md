@@ -596,52 +596,49 @@ You can download and look through other examples:
 
 <div class="table-responsive">
   <table class="table">
-  	<thead><tr><th>What to extend</th><th>Class to use</th></tr></thead>
+  	<thead><tr><th>What to extend</th><th>Class/Interface</th></tr></thead>
   	<tbody>
+      <tr>
+        <td><strong>Note Other Information</strong><br /><br />
+        This interface allows to edit the content of a note.</td>
+        <td>NoteStoringEditableContentPreProcessor</td>
+      </tr>
   		<tr>
-  			<td><strong>Note Content and Metadata</strong><br /><br />
-        With overwriting the method preProcess it is possible to manipulate the note before it is stored at the database.
-  			<br/>Any logic implemented here should be quick and easy. Complicated or longer computations should be done at the rendering pre processor.
-  			</td>
-  			<td>NotePostProcessor.java (Interface)</td>
-  		</tr>
-  		<tr>
-  			<td><strong>Note Other Informations</strong><br /><br />
-        This interface allows to edit other settings of the note than the content and meta data. This preprocessors is called before the those that can edit the content.</td>
-  			<td>NoteStoringImmutableContentPreProcessor.java (Interface)<br />
-            oder NoteStoringEditableContentPreProcessor</td>
+  			<td><strong>Note Other Information</strong><br /><br />
+        This interface allows to edit the meta data of a note.</td>
+  			<td>NoteStoringImmutableContentPreProcessor</td>
   		</tr>
   		<tr>
   			<td><strong>Note Content Rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
   			Overwrite the <code class="highlighter-rouge">processNoteContent()</code> and manipulate the content with their getter and setter functions of the item object.</td>
-  			<td>NoteContentRenderingPreProcessor.java (Interface)</td>
+  			<td>NoteContentRenderingPreProcessor</td>
   		</tr>
   		<tr>
   			<td><strong>Note Metadata Rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
   			Overwrite the <code class="highlighter-rouge">processNote()</code> and manipulate the metadata with their getter and setter functions of the item object.</td>
-  			<td>NoteMetadataRenderingPreProcessor.java (Interface)</td>
+  			<td>NoteMetadataRenderingPreProcessor</td>
   		</tr>
   		<tr>
   			<td><strong>Note User Notification (@user)</strong><br /><br />
   			Allows you to control if the user receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
-  			<td>UserNotificationNoteProcessor.java</td>
+  			<td>UserNotificationNoteProcessor</td>
   		</tr>
   		<tr>
   			<td><strong>Note Topic Notification (@@all, @@authors and @@managers)</strong><br /><br />
   			Allows you to control if the users of a topic receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
-  			<td>NotificationNoteProcessor.java</td>
+  			<td>NotificationNoteProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Note Repost</strong><br /><br />
-  			You can execute logic before the note is saved.</td>
-  			<td>RepostNoteStoringPreProcessor.java</td>
+  			<td><strong>Tag Suggestions</strong><br /><br />
+  			A TagSuggestionProvider allows searching for tags in arbitrary systems. The results will be shown to the user as suggestions.</td>
+  			<td>TagSuggestionProvider</td>
   		</tr>
   		<tr>
   			<td><strong>Note Attachments</strong><br /><br />
   			Processor to process attachments before they will finally be stored.</td>
-  			<td>AttachmentStoringPreProcessor.java (Interface)</td>
+  			<td>AttachmentStoringPreProcessor</td>
   		</tr>
   		<tr>
   			<td><strong>New Note Format</strong><br /><br />
@@ -666,7 +663,7 @@ You can download and look through other examples:
       <tr>
         <td><strong>TagStore</strong><br /><br />
         Add an own tag store</td>
-        <td>TagStore (Interface)</td>
+        <td>TagStore</td>
       </tr>
       <tr>
         <td><strong>User preferences</strong><br /><br />
@@ -677,7 +674,7 @@ You can download and look through other examples:
   			<td><strong>External user repository</strong><br /><br />
         It is possible to integrate a own user repository.
   			</td>
-  			<td>ExternalUserRepository (Interface)</td>
+  			<td>ExternalUserRepository</td>
   		</tr>
   		<tr>
   			<td><strong>Content Type</strong><br /><br />
@@ -696,28 +693,23 @@ Extend the `AdministrationViewController` and implement the `Controller` Interfa
 
 ### 1.2.5.3 Events
 
-Implement the interface `com.communote.server.events.EventListener<Your Event>` to extend your Event.
+Implement the interface `com.communote.server.events.EventListener<Your Event Type>` to extend your Event.
 
 <div class="table-responsive">
   <table class="table">
-  	<thead><tr><th>What to extend</th><th>Class to use (see description above)</th></tr></thead>
+  	<thead><tr><th>What to extend</th><th>Event Type</th></tr></thead>
   	<tbody>
   		<tr>
   			<td><strong>Topic created</strong><br /><br />
         Event to notify about new topics.
   			</td>
-  			<td>ExternalUserRepository (Interface)</td>
+  			<td>ExternalUserRepository</td>
   		</tr>
   		<tr>
   			<td><strong>Role changed</strong><br /><br />
         Event to notify about a change of a blog role of a user. This covers all roles that have been assigned to the user either directly or indirectly through group membership.
 The reason for the event can be that the role was added, removed or modified.</td>
-  			<td>extends AdministrationViewController implements Controller</td>
-  		</tr>
-  		<tr>
-  			<td><strong>Admin Topic Access</strong><br /><br />
-        If the admin force to receive topic access.</td>
-  			<td>TopicAccessRightsChangedEvent oder UserToTopicRoleMappingChangedEvent</td>
+  			<td>AssignedBlogRoleChangedEvent</td>
   		</tr>
       <tr>
         <td><strong>Discussion changed</strong><br /><br />
@@ -819,6 +811,12 @@ Helper to initialize the application. The component provides different hooks to 
         </td>
   			<td>communote.configuration<br />.mainPageContexts[<strong>Parent View ID</strong>].push(<strong>View ID</strong>)</td>
   		</tr>
+      <tr>
+        <td><strong>Default render options for widgets at views</strong><br /><br />
+        It is possible to change the render options for widgets in a view. You can hide for example the tag cloud in the notes overview per default.
+        </td>
+        <td>communote.configuration.factory.defaultNoteViewRenderOptions</td>
+      </tr>
   	</tbody>
   </table>
 </div>
