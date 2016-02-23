@@ -599,49 +599,49 @@ You can download and look through other examples:
   	<thead><tr><th>What to extend</th><th>Class/Interface</th></tr></thead>
   	<tbody>
       <tr>
-        <td><strong>Note Other Information</strong><br /><br />
-        This interface allows to edit the content of a note.</td>
+        <td><strong>Note content before stored</strong><br /><br />
+        This interface allows to edit the content of a note before it is stored at the database.</td>
         <td>NoteStoringEditableContentPreProcessor</td>
       </tr>
   		<tr>
-  			<td><strong>Note Other Information</strong><br /><br />
-        This interface allows to edit the meta data of a note.</td>
+  			<td><strong>Note metadata before stored</strong><br /><br />
+        This interface allows to edit the metadata of a note before it is stored at the database.</td>
   			<td>NoteStoringImmutableContentPreProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Note Content Rendering</strong><br /><br />
+  			<td><strong>Note content rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
   			Overwrite the <code class="highlighter-rouge">processNoteContent()</code> and manipulate the content with their getter and setter functions of the item object.</td>
   			<td>NoteContentRenderingPreProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Note Metadata Rendering</strong><br /><br />
+  			<td><strong>Note metadata rendering</strong><br /><br />
   			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
   			Overwrite the <code class="highlighter-rouge">processNote()</code> and manipulate the metadata with their getter and setter functions of the item object.</td>
   			<td>NoteMetadataRenderingPreProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Note User Notification (@user)</strong><br /><br />
+  			<td><strong>Note user notification (@user)</strong><br /><br />
   			Allows you to control if the user receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
   			<td>UserNotificationNoteProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Note Topic Notification (@@all, @@authors and @@managers)</strong><br /><br />
+  			<td><strong>Note topic notification (@@all, @@authors and @@managers)</strong><br /><br />
   			Allows you to control if the users of a topic receiving a notification by overwriting the function <code class="highlighter-rouge">preProcess()</code>.</td>
   			<td>NotificationNoteProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>Tag Suggestions</strong><br /><br />
+  			<td><strong>Tag suggestions</strong><br /><br />
   			A TagSuggestionProvider allows searching for tags in arbitrary systems. The results will be shown to the user as suggestions.</td>
   			<td>TagSuggestionProvider</td>
   		</tr>
   		<tr>
-  			<td><strong>Note Attachments</strong><br /><br />
+  			<td><strong>Note attachments</strong><br /><br />
   			Processor to process attachments before they will finally be stored.</td>
   			<td>AttachmentStoringPreProcessor</td>
   		</tr>
   		<tr>
-  			<td><strong>New Note Format</strong><br /><br />
+  			<td><strong>New note format</strong><br /><br />
   			Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the <code class="highlighter-rouge">ActivityNoteItemTemplateProvider</code>.</td>
   			<td>CPLNoteItemTemplateProvider</td>
   		</tr>
@@ -661,7 +661,7 @@ You can download and look through other examples:
   			<td>CPLNoteActionsProvider</td>
   		</tr>
       <tr>
-        <td><strong>TagStore</strong><br /><br />
+        <td><strong>Tag store</strong><br /><br />
         Add an own tag store</td>
         <td>TagStore</td>
       </tr>
@@ -677,7 +677,7 @@ You can download and look through other examples:
   			<td>ExternalUserRepository</td>
   		</tr>
   		<tr>
-  			<td><strong>Content Type</strong><br /><br />
+  			<td><strong>Content type</strong><br /><br />
         This class allows to add new content types to Communote, for instance "Video", "Image" or "Document". Content types can be used in conjunction with the <code class="highlighter-rouge">ContentTypeWidget</code> to allow filtering for content types.</td>
   			<td>ContentTypeWidgetExtension</td>
   		</tr>
