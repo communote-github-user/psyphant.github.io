@@ -1,7 +1,7 @@
 ---
 title: 1.2 Write a plugin
 tags: [development]
-keywords: plugin, note manipulation, maven, extension points
+keywords: plugin, note manipulation, maven, extension points, tags, attachments, preferences, repost, notification, rendering
 last_updated: March 10, 2016
 ---
 Communote uses OSGi (Apache Felix) in conjuction with Apache iPOJO for offering extensibility  and variability in an easy way. This also provides the possibility to add and remove plugins while Communote runs. Currently it is possible to:
@@ -592,74 +592,237 @@ You can download and look through other examples:
 
 ## 1.2.5 Platform Extension Points
 
-### Notes
+### 1.2.5.1 Extend Notes, Tags, Users
 
-<table>
-	<thead><tr><th>What to extend</th><th>Description</th><th>Class to use</th></tr></thead>
-	<tbody>
-		<tr>
-			<td>Note Content and Metadata</td>
-			<td>With overwriting the method preProcess it is possible to manipulate the note before it is stored at the database.
-			<br>Any logic implemented here should be quick and easy. Complicated or longer computations should be done at the rendering pre processor.
-			</td>
-			<td>NotePostProcessor.java (Interface)</td>
-		</tr>
-		<tr>
-			<td>Note Other Informations</td>
-			<td>This interface allows to edit other settings of the note than the content and meta data. This preprocessors is called before the those that can edit the content.</td>
-			<td>NoteStoringImmutableContentPreProcessor.java (Interface) oderNoteStoringEditableContentPreProcessor</td>
-		</tr>
-		<tr>
-			<td>Note Content Rendering</td>
-			<td>Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
-			Overwrite the processNoteContent() and manipulate the content with their getter and setter functions of the item object.</td>
-			<td>NoteContentRenderingPreProcessor.java (Interface)</td>
-		</tr>
-		<tr>
-			<td>Note Metadata Rendering</td>
-			<td>Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
-			Overwrite the processNote() and manipulate the metadata with their getter and setter functions of the item object.</td>
-			<td>NoteMetadataRenderingPreProcessor.java (Interface)</td>
-		</tr>
-		<tr>
-			<td>Note User Notification (@user)</td>
-			<td>Allows you to control if the user receiving a notification by overwriting the function preProcess().</td>
-			<td>UserNotificationNoteProcessor.java</td>
-		</tr>
-		<tr>
-			<td>Note Topic Notification (@@all, @@authors and @@managers)</td>
-			<td>Allows you to control if the users of a topic receiving a notification by overwriting the function preProcess().</td>
-			<td>NotificationNoteProcessor.java</td>
-		</tr>
-		<tr>
-			<td>Note Repost</td>
-			<td>You can execute logic before the note is saved.</td>
-			<td>RepostNoteStoringPreProcessor.java</td>
-		</tr>
-		<tr>
-			<td>Attachments</td>
-			<td>Processor to process attachments before they will finally be stored.</td>
-			<td><span>AttachmentStoringPreProcessor.java (Interface)</td>
-		</tr>
-		<tr>
-			<td>New Note Format</td>
-			<td>Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the ActivityNoteItemTemplateProvider.</td>
-			<td>CPLNoteItemTemplateProvider</td>
-		</tr>
-		<tr>
-			<td>Add note meta data</td>
-			<td>Extension for the {@link ChronologicalPostListWidget} which allows adding meta-data to a note which should be available in the JavaScript frontend, for example in a NoteActionHandler or a note click handler.</td>
-			<td>CPLNoteMetaDataProvider</td>
-		</tr>
-		<tr>
-			<td>Add note functions</td>
-			<td>Extension for the ChronologicalPostListWidget which allows adding or replacing actions of a note. This extensions just provides the names of the actions. Additionally message keys for the actions which adhere to the following naming conventions must be provided and exposed to JavaScript:
-			<ul>
-				<li>widget.chronologicalPostList.note.action.NameOfTheAction.label - the display name of the action</li>
-				<li>widget.chronologicalPostList.note.action.NameOfTheAction.title - to provide a value for the title attribute (optional)</li>
-			</ul>
-			More over a JavaScript action handler has to be registered to the NoteActionHandler of the widget.</td>
-			<td>CPLNoteActionsProvider</td>
-		</tr>
-	</tbody>
-</table>
+<div class="table-responsive">
+  <table class="table">
+  	<thead><tr><th>What to extend</th><th>Class to use</th></tr></thead>
+  	<tbody>
+  		<tr>
+  			<td><strong>Note Content and Metadata</strong><br /><br />
+        With overwriting the method preProcess it is possible to manipulate the note before it is stored at the database.
+  			<br/>Any logic implemented here should be quick and easy. Complicated or longer computations should be done at the rendering pre processor.
+  			</td>
+  			<td>NotePostProcessor.java (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Other Informations</strong><br /><br />
+        This interface allows to edit other settings of the note than the content and meta data. This preprocessors is called before the those that can edit the content.</td>
+  			<td>NoteStoringImmutableContentPreProcessor.java (Interface)<br />
+            oder NoteStoringEditableContentPreProcessor</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Content Rendering</strong><br /><br />
+  			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
+  			Overwrite the processNoteContent() and manipulate the content with their getter and setter functions of the item object.</td>
+  			<td>NoteContentRenderingPreProcessor.java (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Metadata Rendering</strong><br /><br />
+  			Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
+  			Overwrite the processNote() and manipulate the metadata with their getter and setter functions of the item object.</td>
+  			<td>NoteMetadataRenderingPreProcessor.java (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note User Notification (@user)</strong><br /><br />
+  			Allows you to control if the user receiving a notification by overwriting the function preProcess().</td>
+  			<td>UserNotificationNoteProcessor.java</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Topic Notification (@@all, @@authors and @@managers)</strong><br /><br />
+  			Allows you to control if the users of a topic receiving a notification by overwriting the function preProcess().</td>
+  			<td>NotificationNoteProcessor.java</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Repost</strong><br /><br />
+  			You can execute logic before the note is saved.</td>
+  			<td>RepostNoteStoringPreProcessor.java</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Note Attachments</strong><br /><br />
+  			Processor to process attachments before they will finally be stored.</td>
+  			<td>AttachmentStoringPreProcessor.java (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>New Note Format</strong><br /><br />
+  			Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the ActivityNoteItemTemplateProvider.</td>
+  			<td>CPLNoteItemTemplateProvider</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Add note meta data</strong><br /><br />
+  			Extension for the {@link ChronologicalPostListWidget} which allows adding meta-data to a note which should be available in the JavaScript frontend, for example in a NoteActionHandler or a note click handler.</td>
+  			<td>CPLNoteMetaDataProvider</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Add note functions</strong><br /><br />
+  			Extension for the ChronologicalPostListWidget which allows adding or replacing actions of a note. This extensions just provides the names of the actions. Additionally message keys for the actions which adhere to the following naming conventions must be provided and exposed to JavaScript:
+  			<ul>
+  				<li>widget.chronologicalPostList.note.action.NameOfTheAction.label - the display name of the action</li>
+  				<li>widget.chronologicalPostList.note.action.NameOfTheAction.title - to provide a value for the title attribute (optional)</li>
+  			</ul>
+  			More over a JavaScript action handler has to be registered to the NoteActionHandler of the widget.</td>
+  			<td>CPLNoteActionsProvider</td>
+  		</tr>
+      <tr>
+        <td><strong>TagStore</strong><br /><br />
+        Add an own tag store</td>
+        <td>TagStore (Interface)</td>
+      </tr>
+      <tr>
+        <td><strong>User preferences</strong><br /><br />
+        Allows to store own user preferences. Implementing class must have an empty constructor to allow instantiation while runtime.</td>
+        <td>UserPreference</td>
+      </tr>
+  		<tr>
+  			<td><strong>External user repository</strong><br /><br />
+        It is possible to integrate a own user repository.
+  			</td>
+  			<td>ExternalUserRepository (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Content Type</strong><br /><br />
+        This class allows to add new content types to Communote, for instance "Video", "Image" or "Document". Content types can be used in conjunction with the ContentTypeWidget to allow filtering for content types.</td>
+  			<td>ContentTypeWidgetExtension</td>
+  		</tr>
+  	</tbody>
+  </table>
+</div>
+
+### 1.2.5.2 Administration Page
+
+An own page at the administration is possible via an AdminController. For an example take a look at the AdminController of this plugin: #Todo: Link zum {AdminstrationPluginSample}
+
+Extend the `AdministrationViewController` and implement the `Controller` Interface.
+
+### 1.2.5.3 Events
+
+Implement the interface `com.communote.server.events.EventListener<Your Event>` to extend your Event.
+
+<div class="table-responsive">
+  <table class="table">
+  	<thead><tr><th>What to extend</th><th>Class to use (see description above)</th></tr></thead>
+  	<tbody>
+  		<tr>
+  			<td><strong>Topic created</strong><br /><br />
+        Event to notify about new topics.
+  			</td>
+  			<td>ExternalUserRepository (Interface)</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Role changed</strong><br /><br />
+        Event to notify about a change of a blog role of a user. This covers all roles that have been assigned to the user either directly or indirectly through group membership.
+The reason for the event can be that the role was added, removed or modified.</td>
+  			<td>extends AdministrationViewController implements Controller</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Admin Topic Access</strong><br /><br />
+        If the admin force to receive topic access.</td>
+  			<td>TopicAccessRightsChangedEvent oder UserToTopicRoleMappingChangedEvent</td>
+  		</tr>
+      <tr>
+        <td><strong>Discussion changed</strong><br /><br />
+        Event, which is fired, when a discussion as changed.</td>
+        <td>DiscussionChangedEvent</td>
+      </tr>
+      <tr>
+        <td><strong>Topic Hierarchy Connections changed</strong><br /><br />
+        Event, which is fired, when a topic is added or removed at the topic hierarchy.</td>
+        <td>TopicHierarchyEvent</td>
+      </tr>
+      <tr>
+        <td><strong>Property changed</strong><br /><br />
+        Fired if property of any entity is created, updated or deleted. Check available types of properties at com.communote.server.core.property.PropertyType</td>
+        <td>PropertyEvent</td>
+      </tr>
+      <tr>
+        <td><strong>Status of a user changed</strong><br /><br />
+        Event that is fired the status of a user was changed.</td>
+        <td>UserStatusChangedEvent</td>
+      </tr>
+  	</tbody>
+  </table>
+</div>
+
+### 1.2.5.4 JS Hooks
+
+**Initializer Callbacks**
+
+Helper to initialize the application. The component provides different hooks to do custom initializations at different points during startup and is exposed in the communote namespace as `communote.initializer`.
+
+<div class="table-responsive">
+  <table class="table">
+  	<thead><tr><th>What to extend</th><th>Callback Function</th></tr></thead>
+  	<tbody>
+  		<tr>
+  			<td><strong>After initialization complete</strong><br /><br />
+        Add a callback function that will be called after the initialization completed. If the widget framework should be initialized this callback will be invoked after any callback added with `addWidgetFrameworkInitializedCallback`.
+  			</td>
+  			<td>communote.initializer.addAfterInitCallbacks</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Before initialization</strong><br /><br />
+        Add a callback function that will be called before doing any kind of initialization.</td>
+  			<td>communote.initializer.addBeforeInitCallbacks</td>
+  		</tr>
+  		<tr>
+  			<td><strong>After Widget Framework initialization</strong><br /><br />
+        Add a callback function that will be called after the widget framework was initialized.</td>
+  			<td>communote.initializer.addWidgetFrameworkInitializedCallbacks</td>
+  		</tr>
+      <tr>
+        <td><strong>After scanning widgets</strong><br /><br />
+        Add a callback function that will be called after scanning for widgets during page load.</td>
+        <td>communote.initializer.addAfterWidgetScanCallbacks</td>
+      </tr>
+      <tr>
+        <td><strong>Before scanning widgets</strong><br /><br />
+        Add a callback function that will be called before scanning for widgets during page load.</td>
+        <td>communote.initializer.addBeforeWidgetScanCallbacks</td>
+      </tr>
+      <tr>
+        <td><strong>After everything</strong><br /><br />
+        Add a callback function that will be called after everything (initializations and widget scan if required) is ready. If called after `initApplication` was called the callback will be invoked directly.</td>
+        <td>communote.initializer.addApplicationReadyCallbacks</td>
+      </tr>
+  	</tbody>
+  </table>
+</div>
+
+**Configurations**
+
+<div class="table-responsive">
+  <table class="table">
+  	<thead><tr><th>What to extend</th><th>Objects</th></tr></thead>
+  	<tbody>
+  		<tr>
+  			<td><strong>View registration</strong><br /><br />
+        New views can be added to the mainPageViewManagerConfig.views object. It is possible to extend a view (via parentViewId as parameter) or create a view from scratch.
+  			</td>
+  			<td>communote.configuration.mainPageViewManagerConfig.views</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Widget registration</strong><br /><br />
+          New widgets can be added (without the "Widget" suffix) to the mainPageViewManagerConfig.widgets object with the following parameters:
+          <ul>
+            <li>widgetType: as identifier and CSS class</li>
+            <li>containerSelector: CSS selector, which says where the Widget takes place</li>
+            <li>settings: object which holds all the widget settings</li>
+          </ul>
+        </td>
+  			<td>communote.configuration.mainPageViewManagerConfig.widgets</td>
+  		</tr>
+  		<tr>
+  			<td><strong>Navigation registration</strong><br /><br />
+        Add a link of a view into the navigation (horizontal or vertical).
+        <br />Set the main view via the parent view ID like for example 'notesOverview', 'topicSelected' or 'userEdit' and push the view ID of the new view to it.
+        <br />The localized frontend name of the navigation point can be set via the message key "mainpage.horizontal.navigation.{Parent View ID}.{View ID}"
+        </td>
+  			<td>communote.configuration<br />.mainPageContexts[<strong>Parent View ID</strong>].push(<strong>View ID</strong>)</td>
+  		</tr>
+  	</tbody>
+  </table>
+</div>
+
+### 1.2.5.5 Overwrite Templates
+
+It is possible to overwrite all the templates registered at the core.vm.tiles-mappings.properties (#ToDo: Link) with an own vm.tiles-mapping.properties file but it cannot be recommended. In the worst case the custom template stops working when a core update alters the overwritten template.

@@ -4,7 +4,7 @@ $( document ).ready(function() {
       scrolling = false,
       backToTop = ['<a href="#doc-top" class="back-to-top"><span class="ion ion-chevron-up"></span><span class="sr-only">Up</span></a>'];
 
-  $("body").append(backToTop);
+  $("#doc").append(backToTop);
   $(".back-to-top").hide();
 
   // first check after 300ms
