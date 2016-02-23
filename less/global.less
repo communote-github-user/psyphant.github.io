@@ -83,11 +83,28 @@ body {
     .container();
     text-align: center;
     padding: 0 10px;
-    img {
+    .communote-logo {
       margin-bottom: 30px;
       margin-top: 20px;
       width: 100%;
       max-width: 278px;
+    }
+    #github-ribbon {
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0;
+      }
+    }
+    @media (max-width: 470px) {
+      text-align: left;
+      height: 92px;
+      @media (max-width: 395px) {
+        #github-ribbon {
+          display: none;
+        }
+      }
     }
   }
 

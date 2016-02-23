@@ -3,8 +3,8 @@
 - title: Home
   url: /
   type: home
-- title: Project
-  url: /project.html
+- title: About
+  url: /about.html
   type: page
 - title: Documentation
   url: /doc/home.html

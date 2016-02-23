@@ -125,11 +125,6 @@ entries:
         audience: developers
         version: all
         output: web, pdf
-      - title: 1.4 Customize the design
-        url: /doc/dev_how_design.html
-        audience: developers
-        version: all
-        output: web, pdf
       - title: 1.5 Alter the core
         url: /doc/dev_how_core.html
         audience: developers

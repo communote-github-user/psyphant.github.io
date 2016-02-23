@@ -591,4 +591,75 @@ You can download and look through other examples:
 * [communote-example-external-authentication](https://github.com/communote/communote-example-external-authentication)
 
 ## 1.2.5 Platform Extension Points
-...
+
+### Notes
+
+<table>
+	<thead><tr><th>What to extend</th><th>Description</th><th>Class to use</th></tr></thead>
+	<tbody>
+		<tr>
+			<td>Note Content and Metadata</td>
+			<td>With overwriting the method preProcess it is possible to manipulate the note before it is stored at the database.
+			<br>Any logic implemented here should be quick and easy. Complicated or longer computations should be done at the rendering pre processor.
+			</td>
+			<td>NotePostProcessor.java (Interface)</td>
+		</tr>
+		<tr>
+			<td>Note Other Informations</td>
+			<td>This interface allows to edit other settings of the note than the content and meta data. This preprocessors is called before the those that can edit the content.</td>
+			<td>NoteStoringImmutableContentPreProcessor.java (Interface) oderNoteStoringEditableContentPreProcessor</td>
+		</tr>
+		<tr>
+			<td>Note Content Rendering</td>
+			<td>Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
+			Overwrite the processNoteContent() and manipulate the content with their getter and setter functions of the item object.</td>
+			<td>NoteContentRenderingPreProcessor.java (Interface)</td>
+		</tr>
+		<tr>
+			<td>Note Metadata Rendering</td>
+			<td>Allows to execute logic after the note is saved. At the point of manipulation the note is already stored at the database. The process is working async.
+			Overwrite the processNote() and manipulate the metadata with their getter and setter functions of the item object.</td>
+			<td>NoteMetadataRenderingPreProcessor.java (Interface)</td>
+		</tr>
+		<tr>
+			<td>Note User Notification (@user)</td>
+			<td>Allows you to control if the user receiving a notification by overwriting the function preProcess().</td>
+			<td>UserNotificationNoteProcessor.java</td>
+		</tr>
+		<tr>
+			<td>Note Topic Notification (@@all, @@authors and @@managers)</td>
+			<td>Allows you to control if the users of a topic receiving a notification by overwriting the function preProcess().</td>
+			<td>NotificationNoteProcessor.java</td>
+		</tr>
+		<tr>
+			<td>Note Repost</td>
+			<td>You can execute logic before the note is saved.</td>
+			<td>RepostNoteStoringPreProcessor.java</td>
+		</tr>
+		<tr>
+			<td>Attachments</td>
+			<td>Processor to process attachments before they will finally be stored.</td>
+			<td><span>AttachmentStoringPreProcessor.java (Interface)</td>
+		</tr>
+		<tr>
+			<td>New Note Format</td>
+			<td>Extension for the ChronologicalPostList widget which provides means to render the HTML of a note with another template. As an example take a look into the ActivityNoteItemTemplateProvider.</td>
+			<td>CPLNoteItemTemplateProvider</td>
+		</tr>
+		<tr>
+			<td>Add note meta data</td>
+			<td>Extension for the {@link ChronologicalPostListWidget} which allows adding meta-data to a note which should be available in the JavaScript frontend, for example in a NoteActionHandler or a note click handler.</td>
+			<td>CPLNoteMetaDataProvider</td>
+		</tr>
+		<tr>
+			<td>Add note functions</td>
+			<td>Extension for the ChronologicalPostListWidget which allows adding or replacing actions of a note. This extensions just provides the names of the actions. Additionally message keys for the actions which adhere to the following naming conventions must be provided and exposed to JavaScript:
+			<ul>
+				<li>widget.chronologicalPostList.note.action.NameOfTheAction.label - the display name of the action</li>
+				<li>widget.chronologicalPostList.note.action.NameOfTheAction.title - to provide a value for the title attribute (optional)</li>
+			</ul>
+			More over a JavaScript action handler has to be registered to the NoteActionHandler of the widget.</td>
+			<td>CPLNoteActionsProvider</td>
+		</tr>
+	</tbody>
+</table>

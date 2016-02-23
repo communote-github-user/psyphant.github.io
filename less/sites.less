@@ -314,4 +314,19 @@
     margin-bottom: 30px;
     line-height: 1.5;
   }
+  dl {
+    dt, dd {
+      line-height: 1.8;
+    }
+    @media (min-width: @screen-md-min) {
+      display: flex;
+      flex-wrap: wrap;
+      dt {
+        flex-basis: 20%;
+      }
+      dd {
+        flex-basis: 80%;
+      }
+    }
+  }
 }
