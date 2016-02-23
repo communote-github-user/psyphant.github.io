@@ -18,7 +18,7 @@ $( document ).ready(function() {
   $(window).on('resize', function(){
     // check sidebar if the user resized his browser
     if( !scrolling ) {
-      (!window.requestAnimationFrame) ? setTimeout(checkSidebarHeight, 300) : window.requestAnimationFrame(checkScrollbarPosition);
+      (!window.requestAnimationFrame) ? setTimeout(checkSidebarHeight, 300) : window.requestAnimationFrame(checkSidebarHeight);
       scrolling = true;
     }
   });
@@ -29,6 +29,12 @@ $( document ).ready(function() {
       $('.back-to-top').fadeIn();
     } else {
       $('.back-to-top').fadeOut();
+    }
+
+    if ($(this).scrollTop() > 100) {
+      sidebar.css('top', '0');
+    } else {
+      sidebar.css('top', 'auto');
     }
   });
 
