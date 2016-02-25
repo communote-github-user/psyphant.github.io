@@ -566,8 +566,23 @@
     .kbCaption {
       color: white;
       background-color: #444;
-      padding:10px;
+      padding: 10px;
     }
+
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -20px;
+      .grid-elem {
+        flex: 1 1 50%;
+        padding: 0 20px;
+        min-width: 400px;
+        > ul {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
   }
   #definition-box-container div a.active {
     font-weight: bold;
