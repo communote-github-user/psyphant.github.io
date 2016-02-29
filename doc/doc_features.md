@@ -1,6 +1,6 @@
 ---
 title: Feature List
-tags: [development]
+tags: [getting_started]
 keywords: features, list
 last_updated: March 10, 2016
 ---

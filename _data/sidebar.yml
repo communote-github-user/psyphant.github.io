@@ -36,9 +36,15 @@ entries:
 
     - title: Feature List
       url: /doc/doc_features.html
-      audience: users
+      audience: users, developers, admins
       version: all
       output: web
+
+    - title: FAQ
+      url: /doc/doc_faq.html
+      audience: users, developers, admins
+      version: all
+      output: web, pdf
 
   - title: User Documentation
     audience: users
@@ -137,11 +143,6 @@ entries:
       output: web, pdf
     - title: 3 Design Guidelines
       url: /doc/dev_design.html
-      audience: developers
-      version: all
-      output: web, pdf
-    - title: 4 FAQ
-      url: /doc/dev_faq.html
       audience: developers
       version: all
       output: web, pdf
