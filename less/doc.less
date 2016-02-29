@@ -7,16 +7,15 @@
 
   .doc-sidebar {
     .make-md-column(4);
-    .make-lg-column(3);
+    @media (min-width: @screen-lg-min) {
+      width: 28%;
+    }
 
     #sidebar {
       width: 300px;
-      @media (max-width: 990px) {
+      @media (max-width: @screen-sm-max) {
         position: relative;
-        width: 80%;
         margin: 15px auto;
-      }
-      @media (max-width: 768px) {
         width: 100%;
       }
       /* search area */
@@ -176,7 +175,9 @@
   }
   .doc-content {
     .make-md-column(8);
-    .make-lg-column(9);
+    @media (min-width: @screen-lg-min) {
+      width: 72%;
+    }
     .btn {
       margin: 10px 0;
     }
@@ -572,13 +573,15 @@
     .flex-grid {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -20px;
+      margin-left: -20px;
       .grid-elem {
         flex: 1 1 50%;
         padding: 0 20px;
-        min-width: 400px;
         > ul {
           margin-bottom: 30px;
+        }
+        @media (max-width: @screen-xs-max) {
+          flex: 1 1 100%;
         }
       }
     }
