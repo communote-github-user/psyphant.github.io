@@ -1,5 +1,5 @@
 ---
-title: 2.7 Bookmarklet
+title: 2.8 Bookmarklet
 tags: [functions]
 keywords: functions, bookmarklet
 last_updated: March 10, 2016

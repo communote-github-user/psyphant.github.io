@@ -1,5 +1,5 @@
 ---
-title: 2.6 Embed Communote
+title: 2.7 Embed Communote
 tags: [functions]
 keywords: functions, editor, topics, bookmarklet
 last_updated: March 10, 2016

@@ -75,6 +75,7 @@ last_updated: March 10, 2016
 
 * Integrated user and usergroup management
 * LDAP sync for users and groups
+* Manage tags and import external tags stores
 
 **Customizable**
 
