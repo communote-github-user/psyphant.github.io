@@ -10,6 +10,7 @@ github_editme_path: Communote/communote.github.io
 disqus_shortname: communote-doc
 
 pdf_file_name: Communote-Documentation.pdf
+pdf_rest_api_file_name: REST-API-Documentation.pdf
 
 port: 4009
 

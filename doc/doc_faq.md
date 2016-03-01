@@ -35,10 +35,10 @@ It is possible to search through the URL. You can search for notes, topics and p
 
 **Search notes**
 
-* URL for all notes /microblog/<ClientId>/portal/home?<QueryString>
-* URL for notes by a person /microblog/<ClientId>/portal/users/<UserAlias>?<QueryString>
-* URL for notes to a topic /microblog/<ClientId>/portal/topics/<TopicAlias>?<QueryString>
-* parameter is noteSearchString
+* URL for all notes ``/microblog/<ClientId>/portal/home?<QueryString>``
+* URL for notes by a person ``/microblog/<ClientId>/portal/users/<UserAlias>?<QueryString>``
+* URL for notes to a topic ``/microblog/<ClientId>/portal/topics/<TopicAlias>?<QueryString>``
+* parameter is ``noteSearchString``
 * result shows notes that matches with the keyword
 * results will be shown in the "all notes" tab
 * you can add different keywords separated by spaces
@@ -46,8 +46,8 @@ Example: http://communote.com/microblog/global/portal/users/lisa?noteSearchStrin
 
 **Search topics**
 
-* URL for the topic overview /microblog/<ClientId>/portal/topics?<QueryString>
-* parameter is topicSearchString
+* URL for the topic overview ``/microblog/<ClientId>/portal/topics?<QueryString>``
+* parameter is ``topicSearchString``
 * result shows topics that matches with the keyword in their names
 * results will be shown in the topics overview
 * you can add different keywords separated by spaces
@@ -55,8 +55,8 @@ Example: http://communote.com/microblog/global/portal/topics?topicSearchString=c
 
 **Search people**
 
-* URL for the people overview /microblog/<ClientId>/portal/users?<QueryString>
-* parameter is userSearchString
+* URL for the people overview ``/microblog/<ClientId>/portal/users?<QueryString>``
+* parameter is ``userSearchString``
 * result shows people that matches with the keyword in their names and/or alias
 * results will be shown in the people overview
 * you can add different keywords separated by spaces
