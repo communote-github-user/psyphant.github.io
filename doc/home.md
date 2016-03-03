@@ -15,11 +15,11 @@ Communote is a lean web-based social communication platform for teams and small 
 
 ## History of Communote
 
-Initially, Communote has been developed by a German consulting firm [Communardo Software GmbH](http://www.communardo.de/) with focussing on small and medium-sized businesses in the DACH region. The development was inspired by spread of the early social media platforms e.g. Twitter. The first commercial version was launched in 2009 - both as cloud and on-premise installations. Communote GmbH, a subsidiary of Communardo, is offering a cloud platform based on Communote available at [www.communote.com](http://www.communote.com/).
+Initially, Communote has been developed by a German consulting firm [Communardo Software GmbH](http://www.communardo.de/) with focussing on small and medium-sized businesses in the German-speaking countries. The development was inspired by spread of the early social media platforms e.g. Twitter. The first commercial version was launched in 2009 - both as cloud and on-premise installations. Communote GmbH, a subsidiary of Communardo, is offering a cloud platform based on Communote available at [www.communote.com](http://www.communote.com/).
 
-## Why OpenSource?
+## Why open source?
 
-In 2015 Communardo decided to make the underlying software platform available for free and open source under the Apache 2.0 license. This decision was based on the strong belief that the ideas of open team communication and open source software development will benefit from each other. Making Communote open source will allow many more teams and institutions, profit or non-profit, to implement open communication the serve their clients even better.
+In 2015 Communardo decided to make the underlying software platform available for free and open source under the [Apache 2.0 license](http://www.apache.org/licenses/LICENSE-2.0). This decision was based on the strong belief that the ideas of open team communication and open source software development will benefit from each other. Making Communote open source will allow many more teams and institutions, profit or non-profit, to implement open communication the serve their clients even better.
 
 ## Download the documentation
 
