@@ -30,7 +30,7 @@
       flex-wrap: wrap;
 
       .functions-teaser {
-        flex: 3;
+        flex-grow: 3;
         margin-top: 60px;
         margin-right: 30px;
         .icon-bar {
@@ -41,7 +41,7 @@
           margin: 35px -10px 0;
           overflow: hidden;
           li {
-            flex: 1;
+            flex-grow: 1;
             text-align: center;
             margin: 0 10px;
             @media (max-width: @screen-md-max) {
@@ -65,7 +65,7 @@
       }
 
       .images-teaser {
-        flex: 1;
+        flex-grow: 1;
         .fc-slideshow {
           margin-top: 35px;
           width: 400px;
@@ -113,7 +113,7 @@
       background-size: cover;
       padding-bottom: 50px;
       .teaser-wrapper .functions-teaser {
-        flex: 100%;
+        flex-basis: 100%;
         margin-top: 0;
         margin-right: 0;
         .icon-bar {
