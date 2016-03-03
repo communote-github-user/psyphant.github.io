@@ -31,7 +31,7 @@ $( document ).ready(function() {
       $('.back-to-top').fadeOut();
     }
 
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 150) {
       sidebar.css('top', '0');
     } else {
       sidebar.css('top', 'auto');

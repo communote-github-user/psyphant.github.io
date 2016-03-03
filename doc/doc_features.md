@@ -11,7 +11,7 @@ last_updated: March 10, 2016
 **General**
 
 * Responsive Design for use on desktop computers, tablets and smartphones.
-* Open Source via Apache License Version 2.0
+* Open source via Apache License Version 2.0
 
 **Advanced Editor**
 
@@ -84,7 +84,7 @@ last_updated: March 10, 2016
 
 **We Love Developers!**
 
-* Open core on Github
+* Core available as open source on Github
 * Extensible through Plugins
 
 </div>
