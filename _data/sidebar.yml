@@ -33,13 +33,11 @@ entries:
       audience: users, developers, admins
       version: all
       output: web
-
     - title: Feature List
       url: /doc/doc_features.html
       audience: users, developers, admins
       version: all
       output: web
-
     - title: FAQ
       url: /doc/doc_faq.html
       audience: users, developers, admins
@@ -104,51 +102,34 @@ entries:
         version: all
         output: web, pdf
 
-  - title: Developer Documentation
-    audience: developers
+  - title: Installation Documentation
+    audience: admins
     version: all
     output: web, pdf
     items:
-    - title: 1 How to ...
-      unlinked: true
-      url: /doc/dev_how.html
-      audience: developers
+    - title: 1 System requirements
+      url: /doc/install_requirements.html
+      audience: admins
       version: all
       output: web, pdf
-      thirdlevel:
-      - title: 1.1 Run Communote
-        url: /doc/dev_how_run.html
-        audience: developers
-        version: all
-        output: web, pdf
-      - title: 1.2 Write a Plugin
-        url: /doc/dev_how_plugin.html
-        audience: developers
-        version: all
-        output: web, pdf
-      - title: 1.3 Use the REST-API
-        url: /doc/dev_how_rest.html
-        audience: developers
-        version: all
-        output: web, pdf
-      - title: 1.4 Customize the design
-        url: /doc/dev_how_design.html
-        audience: developers
-        version: all
-        output: web, pdf
-      - title: 1.5 Alter the core
-        url: /doc/dev_how_core.html
-        audience: developers
-        version: all
-        output: web, pdf
-    - title: 2 Layout & Components
-      url: /doc/dev_layout.html
-      audience: developers
+    - title: 2 Installation
+      url: /doc/install_communote.html
+      audience: admins
       version: all
       output: web, pdf
-    - title: 3 Design Guidelines
-      url: /doc/dev_design.html
-      audience: developers
+    - title: 3 Maintenance
+      url: /doc/install_maintenance.html
+      audience: admins
+      version: all
+      output: web, pdf
+    - title: 4 Openfire
+      url: /doc/install_openfire.html
+      audience: admins
+      version: all
+      output: web, pdf
+    - title: 5 Communote Extensions
+      url: /doc/install_extensions.html
+      audience: admins
       version: all
       output: web, pdf
 
@@ -165,5 +146,54 @@ entries:
     - title: 2 System Administration
       url: /doc/admin_system.html
       audience: admins
+      version: all
+      output: web, pdf
+
+  - title: Developer Documentation
+    audience: developers
+    version: all
+    output: web, pdf
+    items:
+    - title: 1 How to ...
+      unlinked: true
+      url: /doc/dev_how.html
+      audience: developers
+      version: all
+      output: web, pdf
+      thirdlevel:
+      - title: 1.1 Write a Plugin
+        url: /doc/dev_how_plugin.html
+        audience: developers
+        version: all
+        output: web, pdf
+      - title: 1.2 Customize the design
+        url: /doc/dev_how_design.html
+        audience: developers
+        version: all
+        output: web, pdf
+      - title: 1.3 Build the core
+        url: /doc/dev_how_core.html
+        audience: developers
+        version: all
+        output: web, pdf
+    - title: 2 Technical Overview
+      url: /doc/dev_technical.html
+      audience: developers
+      version: all
+      output: web, pdf
+      thirdlevel:
+    - title: 3 Javadoc
+      url: /doc/dev_java_doc.html
+      audience: developers
+      version: all
+      output: web, pdf
+    - title: 4 REST API
+      url: /doc/dev_rest_api.html
+      audience: developers
+      version: all
+      output: web, pdf
+    - title: 5 Design Guidelines
+      url: /doc/dev_design.html
+      audience: developers
       version: all
       output: web, pdf

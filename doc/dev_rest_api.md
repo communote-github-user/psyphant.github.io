@@ -1,5 +1,5 @@
 ---
-title: 1.3 Use the REST-API
+title: 4 REST-API
 tags: [development]
 keywords: rest, api
 last_updated: March 10, 2016

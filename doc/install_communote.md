@@ -1,22 +1,11 @@
 ---
-title: 1.1 Run Communote
-tags: [development]
-keywords: run, communote, tomcat, deployment, war, java
+title: 2 Installation
+tags: [getting_started]
+keywords: installation, deployment, configuration
 last_updated: March 10, 2016
 ---
 
-First, you need the following things:
-
-* Git
-* Java
-* Tomcat 7
-* Maven
-* PostgreSQL or MySQL
-* Coffee and cookies
-
-If you have everything ready download the newest WAR file from http://communote.github.io/download/communote.war.
-
-## 1.1.1 Config Tomcat and deploy WAR
+## 2.1 Config Tomcat and deploy WAR
 
 First of all rename your downloaded WAR file to `ROOT.war` and copy it to your Tomcat `webapps` directory. Remove the `ROOT` folder if it already exists.
 
@@ -89,7 +78,7 @@ You now have to configure the server before the first start:
 
 6. Now you can start your server.
 
-## 1.1.2 Install Communote
+## 2.2 Install Communote
 
 Start your browser for the final installation and go to the homepage of your own Communote instance. By default it is accessible on the same host at `http://localhost:8080/`.
 
