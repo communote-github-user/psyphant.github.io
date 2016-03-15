@@ -11,7 +11,7 @@ There are different installation packages for Communote:
 
 **Installation with system integration script**
 
-Tested with chosen Linux distributions. It contains a script which supports the system integration of the installation. This installation package already contains a Java Runtime Environment, therefore there is a 32 and 64bit version
+Tested with chosen Linux distributions. It contains a script which supports the system integration of the installation. This installation package already contains a Java Runtime Environment, therefore there is a 32 and 64bit version.
 
 **Installation without system integration script**
 
