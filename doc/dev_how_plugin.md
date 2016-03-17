@@ -33,16 +33,18 @@ In this example we would like to create a plugin to extend the note rendering pr
 1. To generate such a construction message you have to create a JavaScript file `construction.js` at `src\main\resources\META-INF\resources\static\javascript`:
 
    ```javascript
-   window.addEvent('load', //If the portal site loaded...
-     function(event) {
-     //... it generates a container with a localized message and append it at the top  
-       var constructionContainer  = new Element('div', {
-         id: 'construction-container',
-         html: '<h1>' + communote.i18n.getMessage("plugins.communote.tutorial.construction.text") + '</h1>'
+   // Jumps in when the namespace Communote and the main layout is loaded
+   if (window.communote && communote.environment && communote.environment.page == 'main') {
+       // Add the construction container before Communote start to initialize everything
+       communote.initializer.addBeforeInitCallback(function() {
+           //... it generates a container with a localized message and append it at the top
+           var constructionContainer  = new Element('div', {
+                   id: 'construction-container',
+                   html: '<h1>' + communote.i18n.getMessage("plugins.communote.tutorial.construction.text") + '</h1>'
+               });
+           constructionContainer.inject($('cn-view-wrapper'), 'top');
        });
-       constructionContainer.inject($('cn-view-wrapper'), 'top');
-     }
-   );
+   }
    ```
 
    With the `communote.i18n.getMessage()` function you are able to search for translation message keys.
@@ -67,9 +69,7 @@ In this example we would like to create a plugin to extend the note rendering pr
    @Provides
    @Instantiate
    public class TutorialJsMessages implements JsMessagesExtension {
-      /**
-       * {@inheritDoc}
-      */
+
       @Override
       public Map<String, Set<String>> getJsMessageKeys() {
          HashSet<String> messageKeys = new HashSet<String>();
@@ -162,8 +162,7 @@ In this example we would like to create a plugin to extend the note rendering pr
       */
       @Override
       public boolean isCachable() {
-         // Because of the 118n it is not cachable right now
-         return false;
+         return true;
       }
 
       /**
@@ -351,15 +350,11 @@ This example will explain you how to create a view at the notes overview with on
 
        ````java
        public class HelloWorldWidget extends EmptyWidget {
-         /**
-           * Get the tile to be used for rendering
-           *
-           * @param outputType
-           *            the output type (rss, dhtml ...) without any '.'
-           * @return The tile to show
-           */
+
            @Override
            public String getTile(String outputType) {
+             // key of the vm.tiles-mappings.properties entry whose value holds
+             // the path of the velocity file which should be rendered
              return "com.communote.tutorial.HelloWorld.widget";
            }
        }
@@ -373,25 +368,23 @@ This example will explain you how to create a view at the notes overview with on
     3. The linked Velocity file `HelloWorld.Widget.html.vm` needs to be placed at `resources/META-INF/resources/vm/widget/` and have the following content:
 
        ````html
-       ## via the widget instance it is possible to access functions and variables
-       ## of the JavaScript widget class
+       ##
+       ## $widgetInstance -> via the widget instance it is possible to access functions and variables by the JavaScript widget class
+       ##
        #set($widgetInstance = "#jsCurrentWidget()")
        <div class="cn-form-container">
-         <div class="cn-field-50">
-           <label class="cn-label" for="${widget.WidgetId}_message">
-             ## In order to internationalize your code
-             ## use the helper functions #t(key) and #t_args(key, arguments)
-             #t('plugins.communote.tutorial.widget.HelloWorld.input.label')
-           </label>
-           <input type="text" class="cn-inputTxt"
-             id="${widget.WidgetId}_message" name="${widget.WidgetId}_message" />
-         </div>
-         <div class="cn-buttons">
-           ## Using the widget instance to define an onclick event for the button
-           <input type="button" id="${widget.WidgetId}-show" name="${widget.WidgetId}-show"
-             class="cn-button main" value="#t('plugins.communote.tutorial.widget.HelloWorld.button')"
-             onclick="${widgetInstance}.showSuccessMessage()"/>
-         </div>
+           <div class="cn-field-50">
+               <label class="cn-label" for="${widget.WidgetId}_message">
+                   ## In order to internationalize your code use the helper functions #t(key) and #t_args(key, arguments)
+                   #t('plugins.communote.tutorial.widget.HelloWorld.input.label')
+               </label>
+               <input type="text" class="cn-inputTxt" id="${widget.WidgetId}_message" name="${widget.WidgetId}_message" />
+           </div>
+           <div class="cn-buttons">
+               ## Using the widget instance to define an onclick event for the button
+               <input type="button" id="${widget.WidgetId}-show" name="${widget.WidgetId}-show" class="cn-button main"
+                      value="#t('plugins.communote.tutorial.widget.HelloWorld.button')" onclick="${widgetInstance}.showSuccessMessage()"/>
+           </div>
        </div>
        ````
        With this widget template the user can write a text and click on the button to generate it as a Communote notification.
@@ -402,8 +395,11 @@ This example will explain you how to create a view at the notes overview with on
        (function(namespace) {
            var HelloWorldWidget = new Class({
                Extends: C_Widget,
-               // First part "plugin/" is required and marks the widget as one that is provided by a plugin
-               // The maven placeholder is needed to create an unique widget group name based on the name of the OSGi bundle
+               /*
+               First part "plugin/" is required and marks the widget as one that is provided by a plugin.
+               The maven placeholder is needed to create an unique widget group name based on the name of the OSGi bundle and
+               will be replaced by building the plugin.
+               */
                widgetGroup: 'plugin/${maven-symbolicname}',
 
                //This function prints out the input value via a notification
@@ -551,7 +547,7 @@ This example will explain you how to create a view at the notes overview with on
         */
        @Override
        public Widget createWidget(String widgetGroupName, String widgetName,
-           Map<String, String> requestParameters) throws WidgetCreationException {
+           Map<String, String[]> requestParameters) throws WidgetCreationException {
            // Return the new widget instance
            return new HelloWorldWidget();
        }
