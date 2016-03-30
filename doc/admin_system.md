@@ -39,7 +39,7 @@ _Figure "Certificates - Overview"_
 
 ## 2.2 Communication
 
-In this section you can configure Communote for receiving e-mails (see Figure 2 5). You have to specify the credentials of the IMAP server and the e-mail address.
+In this section you can configure Communote for receiving e-mails (see Figure 2 5). You have to specify the credentials of the IMAP server and the email address.
 When Mail-In is configured and activated, Communote will check for incoming mails and post the content of the mail to the associated topic. The mail itself will be marked as deleted on the mail server, as soon as Communote created a post in the topic successfully.
 In case the content of the mail contained a notification defined by the "@" syntax and the users that should be notified do not have the right to read the topic, the message will be created in Communote but the user will only receive an info email. The same happens in case that the message contained a cross topic reference denoted by "&" and the sender of the email does not have write right on those topics.
 In the following cases no message will be created in Communote, but the message will be marked as deleted on the mail server. However the user will receive an info message, if:
